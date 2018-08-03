@@ -1,0 +1,95 @@
+<!--pages/men-wear/menwear.wxml-->
+<view class="container1">
+  <view class="classify">
+    <scroll-view wx:if="{{leibie}}" scroll-x="true" style=" width:100%;">
+      <view class="topSection">
+        <block wx:for="{{leibie}}">
+          <view class="{{(num === index)?'select':''}}" catchtap='erjiye' data-id="{{index}}">
+            <text>{{item}}</text>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- <view class="swiper">
+      <swiper style="width:750rpx;height:350rpx" autoplay="true" interval="2000">
+        <block wx:for="{{imgUrls}}" wx:key="unique">
+          <swiper-item>
+            <image catchtap="detail" src="{{item}}" width="750rpx" height="350rpx"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view> -->
+  <!-- <view class="sousuo">
+      <input placeholder='输入关键字'></input>
+      <image class="search" src="/img/market/2018-03-23_184832.jpg"></image>
+    </view> -->
+  <!-- <view wx:if="{{!commTypeS[0]}}" class="fashion-products">
+    <view class="title">时尚新品</view>
+    <view class="English">
+      <text class="text1"></text>
+      <text class="text2">fashion</text>
+      <text class="text1"></text>
+    </view>
+    <image class="leftimg" src="/img/men-wear/5.gif"></image>
+    <image class="rtimg" src="/img/men-wear/7.gif"></image>
+    <image class="footimg" src="/img/men-wear/11.gif"></image>
+    <image class="footimg" src="/img/men-wear/13.gif"></image>
+  </view>
+  <text wx:if="{{!commTypeS[0]}}" class="cutline"></text>
+  <view wx:if="{{!commTypeS[0]}}" class="selection">
+    <view class="title">精选活动</view>
+    <view class="English">
+      <text class="text1"></text>
+      <text class="text2">selection</text>
+      <text class="text1"></text>
+    </view>
+    <view class="swiper2">
+      <swiper style="width:450rpx;height:380rpx" autoplay="true" interval="2000">
+        <block wx:for="{{specialImg}}" wx:key="unique">
+          <swiper-item>
+            <image src="{{item}}" width="450rpx" height="380rpx"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view> -->
+  <!-- <view wx:if="{{!commTypeS[0]}}" class="zanwu">此类目缺货</view> -->
+  <!-- <text class="cutline"></text>
+  <view class="recommend">
+    <view class="title">品牌推荐</view>
+    <view class="English2"><text class="text1"></text><text class="text2">recommend</text><text class="text1"></text></view>
+    <view class="brand" wx:for="{{brand}}">
+      <image src="{{item.img}}"></image>
+    </view>
+  </view> -->
+  <!-- <text class="cutline"></text> -->
+  <!-- <view class="hot">
+      <view class="title">热销商品</view>
+      <view class="English">
+        <text class="text1"></text>
+        <text class="text2">hot</text>
+        <text class="text1"></text>
+      </view>
+      <block wx:for="{{commTypeS}}">
+        <view wx:if="{{item.foodType != '99元专场'}}" class="hotlist" catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+          <image src="{{item.foodImg}}"></image>
+          <text class="hotname">{{item.foodName}}</text>
+          <text class="hotprice">￥{{item.foodPrice}}</text>
+          <text class="vipprice">会员价：￥{{item.foodLowprice}}</text>
+        </view>
+      </block>
+      
+    </view> -->
+  <view class="footgoodslist">
+    <block wx:for="{{commTypeS}}">
+      <view wx:if="{{item.foodType != '99元专场'}}" class="footgoods" catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+        <image src="{{item.foodImg}}"></image>
+        <text class="text1">{{item.foodName}}</text>
+
+        <text class="text2"> <text class="text4">月销售：{{item.foodHot}}</text>原价：￥{{item.foodPrice}}</text>
+        <text class="text3">创客专享:￥{{item.foodLowprice}}</text>
+      </view>
+    </block>
+  </view>
+</view>

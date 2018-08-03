@@ -1,0 +1,26 @@
+<!--pages/hotel/paixu/paixu.wxml-->
+<view class="container">
+  <view class="header">
+    <view>综合排序</view>
+    <view>人气优先</view>
+    <view class="border">智能排序</view>
+    <view>筛选</view>
+  </view>
+  <view class="cutline"></view>
+  <view bindtap="shopdetail" wx:for="{{[1]}}" class="catelist">
+    <image src="/img/hotel/3.gif"></image>
+    <view class="right">
+      <view class="first">
+        <text>香格里拉大酒店</text>
+        <image src="/img/shopdetail/13.gif"></image>
+      </view>
+      <view class="second">
+        <image src="/img/shopdetail/8.gif"></image>
+        <text class="text1">1342人消费</text>
+        <text class="text2">起</text>
+        <text class="text3">￥2000</text>
+      </view>
+      <view class="third">这里是个定位</view>
+    </view>
+  </view>
+</view>

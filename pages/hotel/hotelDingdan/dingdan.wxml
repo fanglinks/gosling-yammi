@@ -1,0 +1,42 @@
+<!--pages/hotel/hotelDingdan/dingdan.wxml-->
+<view class="container">
+  <view class="roominfo">
+    <view bindtap='shishi' class="first">
+      燕莎中心凯兵斯基酒店（舒适大床房）
+    </view>
+    <view class="second">
+      <text class="text1">入住：{{enter}}</text>
+      <text class="text1">离店：{{leave}}</text>
+      <text class="text1">共{{alldays}}晚</text>
+    </view>
+    <view class="third">
+      <text>大床房</text>
+      <text>免费wifi</text>
+      <text>含早餐</text>
+    </view>
+  </view>
+  <view class="hang">
+    <form bindsubmit="formSubmit">
+    <view class="shuru">
+      <text>姓名</text>
+      <input name="username"></input>
+    </view>
+    <view class="shuru">
+      <text>联系电话</text>
+      <input name="telephone" type="number"></input>
+    </view>
+    <view class="shuru">
+      <text>房间数</text>
+      <input type="number" name="num"></input>
+    </view>
+    <view class="footfixed">
+      <view class="price">
+        <text>￥560.00</text>
+        <text class="text2">总价：</text>
+      </view>
+      <button form-type='submit'>提交订单</button>
+    </view>
+    </form>
+  </view>
+  <view class="xuzhi">入住须知：订单确定后当天18:00之前可以免费取消订单，逾期不可取消</view>
+</view>

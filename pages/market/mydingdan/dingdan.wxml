@@ -1,0 +1,76 @@
+<!--pages/market/dingdan/dingdan.wxml-->
+<view class="container">
+  <view catchtap="userinfo" class="userinfo">
+    <view class="left">
+      <view class="first">
+        <text class="text1">收货人：{{userName}}</text>
+        <text class="text2">{{telNumber}}</text>
+      </view>
+      <view class="second">
+        收货地址：{{address}}
+      </view>
+    </view>
+    <image src="/img/market/2018-04-23_105958.png"></image>
+  </view>
+  <view class="goodsinfo">
+    <view class="storename">
+      {{goodsinfo.commercialName}}
+    </view>
+    <image src="{{goodsinfo.foodImg}}"></image>
+    <view class="right">
+      <view class="first">{{goodsinfo.foodName}}</view>
+      <view class="second">￥{{goodsinfo.foodPrice}}</view>
+      <view class="third">
+        <text class="canshu">{{goodsinfo.canshu1!='无'?goodsinfo.canshu1:''}}</text>
+        <text class="canshu">{{goodsinfo.canshu2!='无'?goodsinfo.canshu2:''}}</text>
+        <view class="selectnum">
+          <view class="text1" catchtap='jian'>-</view>
+          <text class="text2">{{goodsinfo.num}}</text>
+          <view class="text1" catchtap='jia'>+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="peisong">
+    <text>配送</text>
+    <text>快递 免邮</text>
+  </view>
+  <view class="liuyan">
+    <text>买家留言：</text>
+    <input placeholder='请填写与商家协商好后的内容'></input>
+  </view>
+  <view class="leiji">
+    <text>￥{{allprice}}</text>
+    <text>合计：</text>
+    <text>共{{goodsinfo.num}}件商品</text>
+  </view>
+  <view class="jiesuan">
+    <view class="left">
+      <text>￥{{allprice}}</text>
+      <text>合计：</text>
+    </view>
+    <!-- <view catchtap='jiesuan' class="right">结算</view> -->
+     <!-- <form bindsubmit='jiesuan' report-submit="true"> -->
+      <view class="right" catchtap='goumai'>结算</view>
+    <!-- </form>  -->
+  </view>
+  <view wx:if="{{move}}" class="box">
+   
+  </view>
+  <view class="{{move?'tanchuang':'souxia'}}">
+    <view wx:if="{{move}}" class="quxiao" catchtap='cha'>×</view>
+    <view class="goodsprice">
+      <text space="emsp" decode="true">价&emsp;格: <text class="hui">{{allprice}}</text></text>
+    </view>
+    <view space="true" class="goodsprice">
+      <text space="emsp" decode="true">抵&emsp;扣: <text class="hui">0</text></text>
+    </view>
+    <view space="true" class="goodsprice">
+      <text space="emsp" decode="true">需支付: <text class="red">{{allprice}}</text></text>
+    </view>
+    <view class="tishi">钱包余额不足时需微信支付不足余额</view>
+    <form bindsubmit='jiesuan' report-submit="true">
+      <button class="pay" form-type='submit'>确认支付</button>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,134 @@
+<!--pages/home-cate/cate.wxml-->
+<!-- <view class="container">
+  <view class="header">
+    <view>综合排序</view>
+    <view>人气优先</view>
+    <view class="border">智能排序</view>
+    <view>筛选</view>
+  </view>
+  <view bindtap="shopdetail" wx:for="{{tComm}}" class="catelist">
+    <image src="{{item.logo}}"></image>
+    <view class="right">
+      <view class="first">
+        <text>{{item.name}}</text>
+        <!-- <image src="/img/shopdetail/dianpu_shangjia013.gif"></image> -->
+<!-- </view>
+      <view class="second"> -->
+<!-- <image src="/img/shopdetail/dianpu_shangjia_08.gif"></image> -->
+<!-- <text>人均:￥50</text> -->
+<!-- </view>
+      <view class="third">{{item.gps}}</view>
+      <view class="fourth">
+        <text class="text1">推荐</text>
+        <text>{{item.detail}}</text> -->
+<!-- <text>布丁奶茶</text>
+        <text>红茶</text> -->
+
+<!-- </view>
+      <view class="fifth"> -->
+<!-- <text>付款人数</text> -->
+<!-- <text class="floatright">人气：{{item.accessnumber}}</text>
+      </view>
+    </view>
+  </view>
+</view> -->
+<view class="{{food|near==true?'allpages':'allpages_hidden'}}">
+  <view class='food_search'>
+    <input confirm-type="search" bindconfirm="search_wordkey" placeholder='输入商铺名，地点，找优惠'></input>
+    <image class="img_search" src="/img/market/2018-03-23_184832.jpg"></image>
+  </view>
+  <!-- tab选项卡 -->
+  <view class='food_tab'>
+    <view class="{{food?'all_tab red_color':'all_tab'}}" bindtap="food">
+      {{type1?type1:'全部'}}{{food?'▲':'▼'}}
+
+      <!-- <image wx:if="{{!food}}" src='/img/food/bottom.png'></image>
+        <image wx:else src='/img/food/top.png'></image>  -->
+    </view>
+    <view class="{{near?'near_tab red_color':'near_tab'}}" bindtap="near">
+      {{type2?type2:'附近'}}{{near?'▲':'▼'}}
+      <!-- <image wx:if="{{!near}}" src='/img/food/bottom.png'></image>
+        <image wx:else src='/img/food/top.png'></image> -->
+    </view>
+    <view class="{{pink?'pank_tab red_color':'pank_tab'}}" bindtap="pink">
+      智能排序
+      <!-- <image wx:if="{{!pink}}" src='/img/food/bottom.png'></image>
+        <image wx:else src='/img/food/top.png'></image> -->
+    </view>
+  </view>
+
+  <!-- <全部>选项 -->
+  <view wx:if="{{food}}" class='common_tab'>
+    <!-- <scroll-view> -->
+    <block wx:for="{{secondType}}">
+      <view class="common_tab1 {{current_id ==index?'active':''}}" data-index="{{index}}" data-text="{{item}}" bindtap='Food'>{{item.style}}
+        <!-- <block wx:if="{{current_id ==index}}">
+                <view class='common_tab2'>
+                    <block wx:for="{{foods[index].menu}}">
+                        <view class="common_tab2_1 {{current_index ==index?'active1':''}}" data-num="{{index}}" catchtap='Food_cai'>{{item}}</view>
+                    </block>
+                </view>
+            </block> -->
+      </view>
+    </block>
+    <!-- </scroll-view> -->
+  </view>
+  
+  <!-- <附近>选项 -->
+  <view wx:if="{{near}}" class='common_tab'>
+    <block wx:for="{{allnear}}">
+      <view class="common_tab1 {{current_id ==index?'active':''}}" data-index="{{index}}" data-text="{{item}}" bindtap='Near'>{{item}}
+        <!-- <block wx:if="{{current_id ==index}}">
+        <view class='common_tab2'>
+          <block wx:for="{{near_mile}}">
+            <view class="common_tab2_1 {{current_index ==index?'active1':''}}" data-num="{{index}}" catchtap='fujin'>{{item}}</view>
+          </block>
+        </view>
+      </block> -->
+      </view>
+    </block>
+  </view>
+  <!-- <智能排序>选项     -->
+  <!-- <view wx:if="{{pink}}" class='common_tab'>
+    <block wx:for="{{allpink}}">
+        <view class="common_tab1 {{current_id ==index?'active':''}}" data-index="{{index}}" bindtap='Pink' style='width:750rpx'>{{item}} </view>
+    </block>
+</view> -->
+
+
+  <!-- 店铺详情 -->
+  <view class="shop_lists">
+    <block wx:for="{{shoplist}}">
+
+      <view class='food_list' catchtap='shopdetail' data-shopid="{{item.shanghuid}}">
+
+
+        <image class='food_picture' src="{{item.logo}}"></image>
+        <view class='food_store'>
+          <text class="shopname">{{item.name}}</text>
+          <view class='xiaoliang1'>
+            <image src='/img/food/5.png'></image>
+
+          </view>
+          <view class='xiaoliang2'>
+            <text>月售{{item.shanghuSales}}</text>
+            <!-- <text>龙华</text>
+            <text>|</text>
+            <text>茶餐厅</text>
+            <text>|</text>
+            <text>¥55/人</text> -->
+            <text class="distance" style='margin-left:140rpx'>距离您:{{item.distance}}</text>
+          </view>
+        </view>
+        <!-- <view class='food_price'>
+        <text>▼</text>
+        <view>19元 下午茶单人A套餐</view>
+        <view>35元 下午茶双人B套餐</view>
+    </view> -->
+      </view>
+
+    </block>
+  </view>
+  <view class="mengban" wx:if="{{food|near==true}}" bindtap='mengban' catchtouchmove="{{food|near==true?'move':''}}"></view>
+</view>
+

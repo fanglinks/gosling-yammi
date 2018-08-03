@@ -1,0 +1,51 @@
+<!--pages/shopping-cart/shopcar.wxml-->
+<view class="container">
+  <view hidden="{{clear}}" class="clear" catchtap="clearall">清空购物车</view>
+  <scroll-view  scroll-y="true">
+  <view wx:for="{{haha}}" wx:for-item="haha"  class="shopcarlist" catchtap="select" data-index="{{index}}" data-id="{{index}}">
+    <view class="shop-title">
+      <image  src="{{select[index]?'/img/shopdetail/03.gif':'/img/shopdetail/6.gif'}}"></image>
+      <image ></image>
+      <text>{{haha.commercialName}}</text>
+    </view>
+    <view>
+      <image class="leftimg" src="{{haha.foodImg}}"></image>
+      <view class="right">
+        <view class="first">
+          <text class="title">{{haha.foodName}}</text>
+          <!-- <image src="/img/shopping-cart/6.gif"></image> -->
+        </view>
+        <view class="second">
+          <text>￥{{haha.foodPrice}}</text>
+        </view>
+        <view class="third">
+          <text class="left">{{(haha.canshu1 ==='无')?'':haha.canshu1 }}</text>
+          <text class="zhong">{{(haha.canshu2 ==='无')?'':haha.canshu2}}</text>
+          <text class="you">X{{haha.num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+   </scroll-view>
+  <view class="footfixed">
+      <view class="first">
+        <image catchtap="allselect" src="{{isSelected?'/img/shopdetail/03.gif':'/img/shopdetail/6.gif'}}"></image>
+        <view>全选</view>
+      </view>
+      <view class="second">
+        <view class="price">￥{{heji}}</view>
+        <view class="heji">合计：</view>
+      </view>
+      <!-- <view bindtap='jiesuan' class="{{background?'jiesuan hui':'jiesuan'}}">
+        结算
+      </view> -->
+      <form bindsubmit='jiesuan' report-submit="true">
+      <button class="{{background?'jiesuan hui':'jiesuan'}}" form-type='submit'>结算</button>
+    </form>
+    </view>
+    
+    <view class="empty" hidden="{{isempty}}">
+      <image class="emptyimg" src='/img/wede/emptyCar.png'></image>
+      <text>购物车空空如也</text>
+    </view>
+</view>

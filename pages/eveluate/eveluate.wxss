@@ -1,0 +1,117 @@
+/* pages/eveluate/eveluate.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+}
+
+.comment {
+  position: relative;
+  width:710rpx;
+  padding-left: 60rpx;
+  padding-bottom: 185rpx;
+  padding-top: 30rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.comment image {
+  float: left;
+  width: 82rpx;
+  height:82rpx;
+}
+
+.name-talk {
+  padding-left: 100rpx;
+  padding-right: 80rpx;
+  box-sizing: border-box;
+}
+.name-talk .username {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.name-talk .content {
+  font-size: 25rpx;
+  color: #606060;
+  margin-bottom: 15rpx;
+}
+
+.tradename {
+  font-size: 22rpx;
+  color: #999999;
+  margin-bottom: 20rpx;
+}
+
+.talkimg image {
+  float: left;
+  width: 146rpx;
+  height: 146rpx;
+  margin-right: 20rpx;
+}
+
+/* 店铺信息 */
+.shop {
+  position: absolute;
+  left: 20rpx;
+  bottom: 30rpx;
+  width :100%;
+  padding: 0 20rpx;
+  margin-bottom: 10rpx;
+  margin-top: 5rpx;
+  box-sizing: border-box;
+}
+
+.shop image {
+  float: left;
+  width: 109rpx;
+  height: 109rpx;
+}
+
+.shop .right {
+  float: left;
+  width: 570rpx;
+  padding-left: 27rpx;
+  background-color: #f7f7f7;
+}
+.shop .first {
+  height: 30rpx;
+  font-size: 30rpx;
+  color: #000; 
+}
+
+.shop .second {
+  height: 40rpx;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color: #999999;
+  margin-bottom: 15rpx;
+}
+
+.shop .third {
+  height: 25rpx;
+}
+
+.shop .third image {
+  width: 152rpx;
+  height: 27rpx;
+}
+
+.info {
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.shop {
+  height:  110rpx;
+}
+
+/* 评价为空 */
+.empty {
+  font-size: 30rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 400rpx;
+  font-weight: 500;
+}

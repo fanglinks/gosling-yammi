@@ -1,0 +1,83 @@
+<view class="wodepage">
+  <view class="header">
+    <button hidden="{{isShouquan}}" bindgetuserinfo="onGotUserInfo" open-type='getUserInfo' class="login_box">
+      <image src='/img/wede/weidenglu@2x.png'></image>
+      <view class="login" catchtap='login'>快捷登录</view>
+    </button>
+
+    <image hidden='{{!isShouquan}}' class="myCard" src="/img/wede/card.png" catchtap='user_card'></image>
+    <view bindtap="geren" class="touxiang" hidden='{{!isShouquan}}'>
+      <image src="{{avatarUrl}}"></image>
+    </view>
+    <text hidden='{{!isShouquan}}' class="userinfo">
+    <text>{{userType}}</text>
+    <text>{{nickName}}</text>
+    <text class="xinyu">信用分：{{userInfo.userIntegral}}</text>
+    </text>
+    <!-- <view bindtap='upChuangke' hidden='{{chuangkeType}}' class="upvip">VIP</view> -->
+  </view>
+  <!-- <view class="dizhi">
+  <view bindtap="address" class="address">+ 添加地址 / 地址管理</view>
+</view> -->
+  <view class="center">
+    <view bindtap="qianbao">
+      <image style='width:48rpx;height:48rpx;' src="/img/wede/1.gif"></image>
+      <text>钱包</text>
+    </view>
+    <view bindtap="zuji">
+      <image src="/img/wede/zuji.png"></image>
+      <text>足迹</text>
+    </view>
+    <view bindtap="chuangke">
+      <image style='width:48rpx;height:48rpx;' class="mx" src="/img/wede/chuangke.png"></image>
+      <text>创客</text>
+    </view>
+  </view>
+  <view class="foot">
+    <view class="foot-sun">
+      <view bindtap='addCart'>
+        <image src="/img/wede/gerenzhongxin25.gif"></image>
+        <text>购物车</text>
+      </view>
+      <view bindtap="dingdan">
+        <image src="/img/wede/gerenzhongxin28.gif"></image>
+        <text>订单</text>
+      </view>
+      <view bindtap="pingjia">
+        <image src="/img/wede/gerenzhongxin31.gif"></image>
+        <text>评价</text>
+      </view>
+      <view bindtap="shoucang">
+        <image src="/img/wede/gerenzhongxin22.gif"></image>
+        <text>收藏</text>
+      </view>
+    </view>
+    <view class="foot-sun">
+      <view bindtap="myvips">
+        <image src="/img/wede/gerenzhongxin43.gif"></image>
+        <text>关联粉丝</text>
+      </view>
+      <view bindtap="guanlian">
+        <image src="/img/wede/gerenzhongxin38.gif"></image>
+        <text>关联商户</text>
+      </view>
+
+      <view wx:if="{{isComm}}">
+        <navigator target="miniProgram" app-id="wx6a59ae8e8cccd796">
+          <image src="/img/wede/zhaoshang41.gif"></image>
+          <text>我的店铺</text>
+        </navigator>
+      </view>
+
+      <view wx:if="{{!isComm}}" catchtap='ruzhu'>
+        <image src="/img/wede/zhaoshang41.gif"></image>
+        <text>我要开店</text>
+      </view>
+      <view bindtap="jiameng">
+        <image src="/img/wede/gerenzhongxin46.gif"></image>
+        <text>招商加盟</text>
+      </view>
+    </view>
+  </view>
+  <!-- <image bindtap="set" class="set" src="/img/wede/gerenzhongxin03.gif"></image> -->
+</view>

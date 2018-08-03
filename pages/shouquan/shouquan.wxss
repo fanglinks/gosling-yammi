@@ -1,0 +1,37 @@
+/* pages/shouquan/shouquan.wxss */
+image {
+  width: 190rpx;
+  height: 138rpx;
+  margin-top: 200rpx;
+  /* border-radius: 50%; */
+}
+
+.title {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 500;
+  margin-top: 30rpx;
+}
+
+.comment {
+  width: 100%;
+  font-size: 26rpx;
+  color: #999;
+  text-align: center;
+  font-weight: 500;
+  padding: 0 100rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-top: 100rpx;
+}
+
+button {
+  width: 500rpx;
+  height: 70rpx;
+  font-size: rpx;
+  font-weight: 500;
+  text-align: center;
+  line-height: 70rpx;
+  margin-top: 100rpx;
+}
+

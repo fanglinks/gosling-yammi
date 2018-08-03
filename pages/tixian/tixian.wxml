@@ -1,0 +1,22 @@
+<!--pages/tixian/tixian.wxml-->
+<view class="container">
+  <view class="first">
+    <view class="left">
+      <text class="text1">微信钱包</text>
+      <text class="text2">昵称：{{userInfo.nickName}}</text>
+    </view>
+    <view class="right" catchtap='matchers'>点击验证</view>
+  </view>
+  <view class="second">
+    <text class="text1">提现金额</text>
+    <view>
+    <text class="text2">￥</text>
+    <input bindinput='UPfee' class="text3"></input>
+    </view>
+  </view>
+  <view class="third">
+    <text class="shuoming">(满50元可提现)提现金额必须为50的整数倍，每天提现次数不能超过10次</text>
+    <!-- <view class="text2" catchtap='allUpMoney'>全部提现</view> -->
+  </view>
+  <view class="tixianbtn" catchtap='upMoney'><text>提现</text></view>
+</view>

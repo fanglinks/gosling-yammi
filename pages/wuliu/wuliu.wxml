@@ -1,0 +1,21 @@
+<!--pages/wuliu/wuliu.wxml-->
+<view class="container">
+  <view class="cutline"></view>
+  <view class="header">
+    <image src='{{wuliuimg}}'></image>
+    <view class="right">
+      <view class="first">{{wuliutype}}快递包裹</view>
+      <view class="second">订单：{{dingdan}}</view>
+      <view class="third">官方电话：{{telephone}}</view>
+    </view>
+  </view>
+  <view class="cutline"></view>
+  <view class="infolist">
+    <block wx:for="{{wuliuinfo}}">
+      <view class="list">
+        <view class="time">{{item.time}}</view>
+        <view class="right"><text></text> {{item.context}}</view>
+      </view>
+    </block>
+  </view>
+</view>

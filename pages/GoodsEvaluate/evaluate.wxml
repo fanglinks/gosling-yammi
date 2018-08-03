@@ -1,0 +1,53 @@
+<!--pages/GoodsEvaluate/evaluate.wxml-->
+<view class="pages">
+  <view class="cutline_s"></view>
+  <view class="header">
+    <image class="gooosimg" src=''></image>
+    <view class="evalute" catchtap='goodEvaluate'>
+      <image src="{{goodEvaluate?'/img/evaluate/hao-xuanzhong@2x.png':'/img/evaluate/hao@2x.png'}}"></image>
+      <view class="{{goodEvaluate?'redColor':'normal'}}">好评</view>
+    </view>
+    <view class="evalute" catchtap='narmalEvaluate'>
+      <image src="{{narmalEvaluate?'/img/evaluate/hao-xuanzhong@2x.png':'/img/evaluate/hao@2x.png'}}"></image>
+      <view class="{{narmalEvaluate?'redColor':'normal'}}">中评</view>
+    </view>
+    <view class="evalute" catchtap='badEvaluate'>
+      <image src="{{badEvaluate?'/img/evaluate/hao-xuanzhong@2x.png':'/img/evaluate/hao@2x.png'}}"></image>
+      <view class="{{badEvaluate?'redColor':'normal'}}">差评</view>
+    </view>
+  </view>
+  <view class="content">
+    <textarea placeholder='点此可输入更多补充评价'></textarea>
+    <image class="addimg" src='/img/jiantou/kaishiruzhu03.gif'></image>
+    <view class="photo">
+      <scroll-view>
+        <block wx:for="{{}}">
+          <image></image>
+        </block>
+      </scroll-view>
+    </view>
+    
+  </view>
+  <view class="cutline"></view>
+  <view class="footer">
+    <view class="evalutelist">
+      <view>商品质量</view>
+      <block wx:for="{{starlist1}}">
+        <image src="/img/evaluate/weixuanzhogn@2x.png"></image>
+      </block>
+    </view>
+    <view class="evalutelist">
+      <view>物流服务</view>
+      <block wx:for="{{starlist2}}">
+        <image src="/img/evaluate/weixuanzhogn@2x.png"></image>
+      </block>
+    </view>
+    <view class="evalutelist">
+      <view>客服服务</view>
+      <block wx:for="{{starlist3}}">
+        <image src="/img/evaluate/weixuanzhogn@2x.png"></image>
+      </block>
+    </view>
+  </view>
+  <button>提交评价</button>
+</view>

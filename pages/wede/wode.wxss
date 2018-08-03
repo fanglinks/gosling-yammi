@@ -1,0 +1,180 @@
+/* pages/wede/wode.wxss */
+page {
+  width:100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+.header {
+  height: 200rpx;
+  background-color: #333;
+  text-align: center;
+  padding: 50rpx 70rpx;
+  box-sizing: border-box;
+}
+
+.header .myCard {
+  position: absolute;
+  width: 100rpx;
+  height: 60rpx;
+  top: 78rpx;
+  right: 30rpx;
+}
+
+.touxiang {
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.touxiang image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.userinfo {
+  float: left;
+  margin-left: 10px;
+}
+.userinfo text {
+  display: block;
+  line-height: 50rpx;
+  color: #fff;
+  font-size: 28rpx;
+  text-align: left;
+}
+
+.upvip{
+  text-align: right;
+  line-height: 78px;
+  font-size: 10px;
+  color: #fff;
+}
+.upvip {
+  float: right;
+  font-size: 36rpx;
+}
+
+.dizhi {
+  margin-bottom: 20rpx;
+}
+
+.dizhi .address {
+  display:inline-block;
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  color: #fc4d64;
+  text-align: center;
+  line-height: 30px;
+  background-color: #fff;
+}
+/* 中间三按扭样式 */
+
+.center {
+  width: 100%;
+  height: 138rpx;
+  margin-bottom: 10px;
+  padding-top: 30rpx;  
+  background-color: #fff;
+}
+
+.center view {
+  float: left;
+  width: 33.33333333%;
+  text-align: center;
+}
+
+.center view:nth-child(2) {
+  margin-left: 0rpx;
+}
+
+.center view image {
+  display: block;
+  width: 45rpx;
+  height: 45rpx;
+  margin: 0 auto;
+  margin-bottom: 10rpx;
+}
+
+.center view .mx {
+  width: 36rpx;
+  height: 45rpx;
+}
+
+.center view text {
+  font-size: 30rpx;
+  color: #333;
+  vertical-align: text-top;
+}
+
+.foot {
+  width: 100%;
+}
+
+.foot .foot-sun {
+  width: 100%;
+  height: 156rpx;
+  margin-bottom: 1px;
+  background-color: #fff;
+}
+
+.foot .foot-sun view {
+  float: left;
+  width: 25%;
+  height:100%;
+  text-align: center;
+}
+
+.foot .foot-sun view image {
+  display: block;
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 auto;
+  margin-bottom: 10rpx;
+  margin-top: 40rpx;
+}
+
+
+.foot .foot-sun view text {
+  font-size: 23rpx;
+  color: #333;
+  vertical-align: text-top;
+}
+
+
+
+.set {
+  position: absolute;
+  width: 38rpx;
+  height: 36rpx;
+  right: 20rpx;
+  top: 30rpx;
+}
+
+.login {
+  width: 200rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 50rpx;
+  background-color: #999;
+  margin: 0 auto;
+  border-radius: 5rpx;
+}
+
+.login_box {
+  position: absolute;
+  width: 100%;
+  height: 200rpx;
+  top: -20rpx;
+  left: 0;
+  background-color: #333;
+}
+
+.login_box image {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx auto;
+  margin-bottom: 0;
+}

@@ -1,0 +1,115 @@
+/* pages/tixian/tixian.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  padding: 20rpx;
+  background-color: #e7e7e7;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 500rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+
+.first {
+  width: 100%;
+  height: 146rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.first .left {
+  float: left;
+}
+
+.first .left .text1 {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 24rpx;
+}
+
+.first .left .text2 {
+  display: block;  
+  font-size: 25rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+.first .right {
+  float: right;
+  font-size: 22rpx;
+  color: #fc4d64;
+  margin-top: 62rpx;
+}
+
+.second {
+  width: 100%;
+  height: 175rpx;
+}
+
+.second .text1 {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 24rpx;
+  margin-left: 20rpx
+}
+
+.second .text2 {
+  float: left; 
+  font-size: 35rpx;
+  color: #333;
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+}
+
+.second .text3 {
+  float: left;   
+  width: 616rpx; 
+  font-size: 35rpx;
+  color: #fc4d64;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.third {
+  width: 100%;
+}
+
+.third .text1 {
+  float: left;
+  font-size: 22rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+.third .shuoming {
+  float: left;
+  font-size: 22rpx;
+  color: #fc4d64;
+}
+
+.third .text2 {
+  float: right;
+  font-size: 22rpx;
+  color: #fc4d64;
+  margin-right: 20rpx;
+}
+
+.tixianbtn {
+  width: 429rpx;
+  height: 80rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  margin-top: 35rpx;
+  background-color: #fc4d64;
+  border-radius: 8rpx;
+}

@@ -1,0 +1,49 @@
+/* pages/cantuanlist/cantuanlist.wxss */
+
+ .kecanyu {
+  width: 710rpx;
+  height: 110rpx;
+  margin-left: 20rpx;
+  line-height: 110rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.kecanyu image {
+  float: left;
+  width: 85rpx;
+  height: 85rpx;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+  border-radius: 50%;
+}
+
+ .kecanyu .text1 {
+  float: left;
+  height: 110rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 110rpx;
+}
+
+ .kecanyu .text2 {
+  float: right;
+  width: 138rpx;
+  height: 44rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 44rpx;
+  border-radius: 22rpx;
+  margin-left: 20rpx;
+  margin-top: 33rpx;
+  background-color: #fc4d64;
+}
+
+ .kecanyu .text3 {
+  float: right;
+  height: 110rpx;
+  font-size: 22rpx;
+  color: #fc4d64;
+  text-align: center;
+  line-height: 110rpx;
+}

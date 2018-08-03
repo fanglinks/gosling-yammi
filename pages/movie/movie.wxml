@@ -1,0 +1,80 @@
+<!-- 搜索栏 -->
+<view class='movie_search'>
+    <input confirm-type="next" placeholder='请输入电影或电影院'></input>
+    <image class="img_search" src="/img/market/2018-03-23_184832.jpg"></image>
+</view>
+<!-- 热门影片 -->
+<view>
+    <view class='hot_movie'>
+        <view class='movie_title'>
+            <text class='text1'>热门影片</text>
+            <text class='text2'>查看更多＞</text>
+        </view>
+
+        <scroll-view class='scroll' scroll-x='true'>
+            <view wx:for="{{movies}}" class='every_movie'>     
+                <image src='{{item.img}}'class='img_movie'></image>
+                <view class='name_movie'>{{item.name}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<!-- tab选项卡 -->
+<view class='food_tab'>
+    <view class='all_tab' bindtap="food">
+        品牌
+        <image wx:if="{{!food}}" src='/img/food/bottom.png'></image>
+        <image wx:else src='/img/food/top.png'></image>
+    </view>
+    <view class='near_tab' bindtap="near">
+        全城
+        <image wx:if="{{!near}}" src='/img/food/bottom.png'></image>
+        <image wx:else src='/img/food/top.png'></image>
+    </view>
+    <view class='pank_tab' bindtap="pink">
+        距离近
+        <image wx:if="{{!pink}}" src='/img/food/bottom.png'></image>
+        <image wx:else src='/img/food/top.png'></image>
+    </view>
+</view>
+
+<!-- <品牌>选项 -->
+<view wx:if="{{food}}" class='common_tab'>
+    <block wx:for="{{foods}}">
+        <view class="common_tab1 {{current_id ==index?'active':''}}" data-index="{{index}}" bindtap='Food'>{{item.style}}
+            <block wx:if="{{current_id ==index}}">
+                <view class='common_tab2'>
+                    <block wx:for="{{foods[index].menu}}">
+                        <view class="common_tab2_1 {{current_index ==index?'active1':''}}" data-num="{{index}}" catchtap='Food_cai'>{{item}}</view>
+                    </block>
+                </view>
+            </block>
+        </view>
+    </block>
+</view>
+<!-- <全城>选项 -->
+<view wx:if="{{near}}" class='common_tab'>
+    <block wx:for="{{allnear}}">
+        <view class="common_tab1 {{current_id ==index?'active':''}}" data-index="{{index}}" bindtap='Near'>{{item}}
+            <block wx:if="{{current_id ==index}}">
+                <view class='common_tab2'>
+                    <block wx:for="{{near_mile}}">
+                        <view class="common_tab2_1 {{current_index ==index?'active1':''}}" data-num="{{index}}" catchtap='fujin'>{{item}}</view>
+                    </block>
+                </view>
+            </block>
+        </view>
+    </block>
+</view>
+<!-- <距离近>选项     -->
+<view wx:if="{{pink}}" class='common_tab'>
+    <block wx:for="{{allpink}}">
+        <view class="common_tab1 {{current_id ==index?'active':''}}" data-index="{{index}}" bindtap='Pink' style='width:750rpx'>{{item}} </view>
+    </block>
+</view>
+
+<!-- 蒙版 -->
+<!-- <view class="mengban" wx:if="{{food|near|pink==true}}" bindtap='mengban'></view> -->
+
+<!-- 电影详情 -->
+<view class='movie'></view>

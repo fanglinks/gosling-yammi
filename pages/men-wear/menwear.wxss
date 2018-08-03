@@ -1,0 +1,359 @@
+/* pages/men-wear/menwear.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+.menwear{
+  width: 100%;
+  height: 100%;
+}
+
+.container1 {
+  width: 750rpx;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  box-sizing:border-box;
+  padding-top: 76rpx;
+}
+
+.container scroll-view {
+  display: block;
+  width: 100%;
+  height: 74rpx;
+}
+
+.swiper image{
+  width:100%;
+  height:350rpx;
+}
+
+.swiper2 {
+  margin-bottom: 60rpx;
+}
+
+.swiper2 swiper {
+  margin: 0 auto;
+}
+
+
+
+.classify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #e8e8e8;
+  z-index: 20;
+  background-color: #fff;
+  width: 100%;
+  height: 74rpx; 
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+
+
+.topSection view {
+  display: inline-block;
+  height: 72rpx;
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  line-height: 72rpx;
+  margin-right: 50rpx;
+  font-weight: 500;
+}
+
+.topSection .select {
+  color: #fc4d64;
+  border-bottom: 1px solid #fc4d64;
+}
+
+.topSection view:first-child {
+  margin-left: 20rpx;
+}
+
+.sousuo {
+  position: relative;
+}
+
+input {
+  display: block;
+  width: 428rpx;
+  height: 54rpx;
+  margin: 10px auto;
+  color: #999;
+  font-size: 24rpx;
+  border: 1px solid #e8e8e8;
+  border-radius: 27rpx;
+  padding-left: 30px;
+}
+
+.search {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  left: 10px;
+  top: 30rpx;
+}
+
+.fashion-products {
+  width: 100%;
+}
+
+.title {
+  height: 28rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #000;
+  margin-bottom: 10rpx;
+  margin-top: 30rpx;
+}
+
+.English {
+  width: 262rpx;
+  height: 22rpx;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30rpx;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+}
+
+.English2 {
+  width: 300rpx;
+  height: 22rpx;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30rpx;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+}
+
+.English .text1 {
+  float: left;
+  width: 70rpx;
+  height: 1px;
+  background-color: #999;
+  margin: 13rpx 5rpx 7rpx 5rpx;
+}
+
+.English2 .text1 {
+  float: left;
+  width: 70rpx;
+  height: 1px;
+  background-color: #999;
+  margin: 13rpx 5rpx 7rpx 5rpx;
+}
+
+ .English .text2 {
+  float: left;
+  font-size: 22rpx;
+  color: #999;
+  vertical-align: middle;
+}
+
+ .English2 .text2 {
+  float: left;
+  font-size: 22rpx;
+  color: #999;
+  vertical-align: middle;
+}
+
+.fashion-products image {
+  float: left;
+   margin-right: 20rpx;
+   margin-bottom: 20rpx;
+}
+
+.fashion-products .leftimg {
+  width: 298rpx;
+  height: 356rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.fashion-products .rtimg {
+  width: 392rpx;
+  height: 168rpx;
+  margin-right: 20rpx;
+}
+
+.fashion-products .footimg {
+  width: 186rpx;
+  height: 168rpx;
+}
+
+.cutline {
+  width: 100%;
+  height: 20rpx;
+  background-color: #f7f7f7;
+}
+
+.brand {
+  float: left;
+  width: 25%;
+  height: 176rpx;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+
+.brand image {
+  width: 100%;
+  height: 173rpx;
+}
+
+.selection {
+  width: 100%;
+}
+
+.recommend {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.recommend view.brand:nth-child(6) {
+  border-right: none;
+}
+
+.recommend view.brand:nth-child(10) {
+  border-right: none;
+}
+
+.hot {
+  width: 100%;
+}
+
+.hot .English {
+  padding-left: 33rpx;
+}
+
+.hot .hotlist {
+  float: left;
+  width: 50%;
+  height: 550rpx;
+  padding-top: 25rpx;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+
+.hot .hotlist image {
+  width: 100%;
+  height: 330rpx;
+  margin-bottom: 10rpx;
+}
+
+.hot .hotlist .hotname {
+  display: block;
+  width: 100%;
+  height:80rpx;
+  font-size: 26rpx;
+  color: #333;
+  text-align: center;
+  line-height: 40rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.hot .hotlist .hotprice {
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 15rpx;
+  text-align: center;
+}
+
+.hot .hotlist .vipprice {
+  display: block;
+  font-size: 28rpx;
+  color: #fc4d64;
+  text-align: center;
+}
+
+/* 暂无类目 */
+.zanwu {
+  width: 100%;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: #999;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+
+.footgoodslist {
+  width: 100%;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+
+.footgoodslist .footgoods {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 370rpx;
+  height: 540rpx;
+  font-size: 28rpx;
+  text-align: left;
+  /* border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8; */
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.footgoodslist .footgoods:nth-child(even) {
+  margin-right: 0rpx;
+}
+
+.footgoodslist .footgoods image {
+  width: 370rpx;
+  height: 350rpx;
+  /* margin-top: 40rpx;
+  margin-left: 12rpx; */
+  margin-bottom: 20rpx;
+}
+
+.footgoodslist .footgoods .text1 {
+  display: block;
+  width: 100%;
+  height: 76rpx;
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 500;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.footgoodslist .footgoods .text2 {
+  text-align: right;
+  font-size: 23rpx;
+  color: #999;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+}
+
+.footgoodslist .footgoods .text3 {
+  text-align: right;
+  font-size: 23rpx;
+  color: #fc4d64;
+  margin-right: 30rpx;
+
+}
+
+.footgoodslist .footgoods .text4 {
+  float: left;
+  text-align: left;
+  font-size: 23rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+ 

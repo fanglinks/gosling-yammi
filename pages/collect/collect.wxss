@@ -1,0 +1,138 @@
+/* pages/collect/collect.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+}
+
+.select {
+  width: 100%;
+}
+
+.select view {
+  display: inline-block;
+  width: 50%;
+  height: 82rpx;
+  font-size: 30rpx;
+  color: #666;
+  background-color: #fff;
+  text-align: center;
+  line-height: 82rpx;
+}
+
+.select view.is_checked {
+  color: #fc4d64;
+}
+
+.relevance-list {
+  width: 710rpx;
+  height: 248rpx;
+  margin: 20rpx 20rpx 0 20rpx;
+  box-shadow: 6rpx 6rpx 6rpx #e8e8e8;
+  border: 1px solid #e8e8e8;
+  border-radius: 8rpx;
+  background-color: #fff;
+}
+
+.relevance-list .leftimg {
+  float: left;
+  width: 265rpx;
+  height: 248rpx;
+  margin: 0 20rpx 0 0;
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+}
+
+.relevance-list .right {
+  position: relative;
+  width: 425rpx;
+  float: left;
+}
+
+.relevance-list .first {
+  
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #333;
+  margin-top: 8rpx;
+}
+
+.relevance-list .first .title {
+  float: left;
+  width: 280rpx;
+}
+
+.relevance-list .first .time {
+  float: right;
+  font-size: 20rpx;
+  color: #999;  
+  margin-right: 20rpx;
+}
+
+.relevance-list .second {
+  width: 100%;  
+  height: 60rpx;
+  font-size: 25rpx;
+  margin-top: 8rpx;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.relevance-list .third {
+  position: absolute;
+  width: 140rpx;
+  height: 50rpx;
+  right: 20rpx;
+  bottom: 10rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 50rpx;
+  color: #fff;
+  background-color: #fc4d64;
+  border-radius: 5rpx;
+}
+
+.relevance-list .fourth {
+  width: 100%;
+  height: 25rpx;
+  margin-top: 30rpx;
+}
+
+#renjun {
+  width:250rpx;
+  font-size: 25rpx;
+  color: #999;
+}
+
+.relevance-list .fourth .yongjin {
+  float: left;
+  font-size: 25rpx;
+  color: #fc4d64;
+  margin-right: 20rpx;
+}
+
+.rudian {
+  width: 138rpx;
+  height: 42rpx;
+  float: right;
+  font-size: 25rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 42rpx;
+  border-radius: 22rpx;
+  margin-right: 20rpx;
+  background-color: #fc4d64;
+}
+
+/* 收藏为空时显示 */
+.isempty {
+   font-size: 30rpx;
+   color: #999;
+   text-align: center;
+   font-weight: 500;
+   margin-top: 400rpx;
+}

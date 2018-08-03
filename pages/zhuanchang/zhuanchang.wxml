@@ -1,0 +1,18 @@
+<!--pages/zhuanchang/zhuanchang.wxml-->
+<view class="swiper">
+    <swiper style="width:750rpx;height:350rpx" autoplay="true" interval="2000">
+      <block wx:for="{{myad}}" wx:key="unique">
+        <swiper-item>
+          <image  data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}' mode="widthFix" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+<view class="footgoodslist">
+    <view wx:for="{{commTypeS}}" class="footgoods" catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+      <image src="{{item.foodImg}}"></image>
+      <text class="text1">{{item.foodName}}</text>
+      <text class="text2"> <text class="text4">月销售：{{item.foodHot}}</text></text>
+      <text class="text3">专场价:￥{{item.foodLowprice}}</text>
+    </view>
+  </view>

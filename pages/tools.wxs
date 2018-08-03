@@ -1,0 +1,13 @@
+
+function covertDate(dateStr) {
+  var d = getDate(dateStr);
+  var year = d.getFullYear()
+  var month = d.getMonth() + 1
+  var day = d.getDate()
+
+  return year + '-' + month + '-' + day;
+}
+
+module.exports = {
+  covertDate: covertDate
+};

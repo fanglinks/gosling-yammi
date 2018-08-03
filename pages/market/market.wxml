@@ -1,0 +1,154 @@
+<!--pages/market/market.wxml-->
+<!-- <scroll-view class="shangcheng" bindscrolltolower="dibu" scroll-y="true" style=" display: flex"> -->
+<view class="container1">
+  <!-- 轮播收入佣金 -->
+  <!-- <swiper class="radio-window" autoplay="true" interval="3000" circular="true" vertical="true">
+    <block wx:for="{{tanchuang}}">
+      <swiper-item>
+        <view>
+          <text>{{item.msgContext}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper> -->
+  <!-- 轮播广告 -->
+  <view class="swiper">
+    <swiper style="width:750rpx;height:350rpx" autoplay="true" interval="3000" indicator-dots="true">
+      <block wx:for="{{myad}}">
+        <swiper-item>
+          <image data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}' mode="aspectFit" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="sousuo" catchtap='search'>
+    <input disabled="false" placeholder='输入关键字'></input>
+    <image class="search" src="/img/market/2018-03-23_184832.jpg"></image>
+  </view>
+  <!-- <image catchtap="zhuanchang" style='width:100%;height:350rpx;'  src="https://xwq-object-1256294606.cos.ap-guangzhou.myqcloud.com/banner.png"></image> -->
+  <!-- 商城页图标 -->
+  <view class="allIcon">
+    <view class="one" wx:for="{{photos}}">
+      <view bindtap="menwear" data-item="{{item}}">
+        <image src="{{item.img}}"></image>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 头条轮播 -->
+  <view class="headline">
+    <view class="mengceng" catchtouchmove='true'></view>
+    <image class="toutiao" src='/img/collect/toutiao@2x.png'></image>
+    <swiper autoplay="true" circular="true" interval="3500" vertical="true">
+      <swiper-item wx:for="{{tanchuang}}">
+        <image class="touxiang" src="{{item.headPhoto}}"></image>
+        <view>{{item.msgContext}}</view>
+      </swiper-item>
+    </swiper>
+    <image class="background" src='/img/collect/background.png'></image>
+  </view>
+  <text class="cutline"></text>
+  <!-- 拼团 -->
+  <!-- <view class="pingtuan">
+    <view class="biaoti">
+      <image src="/img/market/xiegang.png"></image>
+      <text>极 速 拼 团</text>
+      <image src="/img/market/xiegang.png"></image>
+    </view>
+    <view class="products">
+      <scroll-view bindscrolltolower="lower" scroll-x="true" style=" width:100%;">
+        <block wx:for="{{pintuanList}}">
+          <view class="product" catchtap="todetail" data-pintuanid='{{item.pintuanId}}'>
+            <image src="{{item.foodImg}}"></image>
+            <text class="text1">{{item.foodName}}</text>
+            <!-- <text class="text2">￥225.0</text> -->
+            <!-- <text class="text3">拼团价:￥{{item.pintuanPrice}}</text>
+            <text class="text4">原价:￥{{item.foodPrice}}
+              <text class="huaxian"></text>
+            </text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>  -->
+  <!-- vip专区 -->
+  <!-- <view class="vipPlace">
+    <view class="biaoti">
+      <image src="/img/market/xiegang.png"></image>
+      <text>创 客 专 区</text>
+      <image src="/img/market/xiegang.png"></image>
+    </view>
+    <image catchtap="zhuanchang" style='width:100%;height:350rpx;' src="https://xwq-object-1256294606.cos.ap-guangzhou.myqcloud.com/%E6%A2%A6%E6%83%B3%E7%94%9F%E6%B4%BB%E8%BD%AE%E6%92%AD%E5%9B%BE/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180619130155.jpg"></image>
+  </view> -->
+  <!-- <text class="cutline"></text> -->
+  <!-- 今日推荐 -->
+  <view class="pingtuan">
+    <view class="biaoti_tuijian">
+      <image src="/img/market/tuijian.png"></image>
+      <text>今日推荐</text>
+    </view>
+    <view class="products">
+      <scroll-view bindscrolltolower="tuijian" scroll-x="true" style="width:100%;">
+        <block wx:for="{{tuijian_list}}">
+          <view class="product" data-id='{{index}}' catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+            <image src="{{item.foodImg}}"></image>
+            <text class="text1">{{item.foodName}}</text>
+            <!-- <text class="text2">￥225.0</text> -->
+            <text class="text3">创客专享￥{{item.foodLowprice}}</text>
+            <text class="text4">原价:￥{{item.foodPrice}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <text class="cutline"></text>
+  <!-- 秒杀 -->
+  <view class="pingtuan">
+    <view class="biaoti">
+      <image src="/img/market/xiegang.png"></image>
+      <text>限 购 秒 杀</text>
+      <image src="/img/market/xiegang.png"></image>
+    </view>
+    <view class="products">
+      <scroll-view bindscrolltolower="miaoshalower" scroll-x="true" style="width:100%;">
+        <block wx:for="{{miaoshaList}}">
+          <view class="product" catchtap="todetailMiaosha" data-id='{{index}}' data-goodsid='{{item.goodsId}}' data-yuanjia='{{item.foodPrice}}'>
+            <image src="{{item.foodImg}}"></image>
+            <text class="text1">{{item.foodName}}</text>
+            <!-- <text class="text2">￥225.0</text> -->
+            <text class="text3">秒杀价：￥{{item.snipingFee}}</text>
+            <text class="text4">原价:￥{{item.foodPrice}}
+              <text class="huaxian"></text>
+            </text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <text class="cutline"></text>
+  <text class="cutline"></text>
+  <view class="temai">
+    <text class="xian"></text>
+    <text>爆款特卖</text>
+    <text class="xian2"></text>
+  </view>
+  <view class="footgoodslist">
+    <block wx:for="{{goods}}">
+      <view class="footgoods" catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+        <image src="{{item.foodImg}}"></image>
+        <text class="text1">{{item.foodName}}</text>
+
+        <text class="text2"> <text class="text4">月销售：{{item.foodHot}}</text>原价：￥{{item.foodPrice}}</text>
+        <text class="text3">创客专享:￥{{item.foodLowprice}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<view wx:if="{{loading}}" class="loading"></view>
+<!-- </scroll-view> -->
+
+<view class="mengban" wx:if="{{red_packet}}" catchtouchmove='true'></view>
+<image class="redpacket" wx:if="{{red_packet}}" src='/img/market/hongbao.png' catchtouchmove='true' catchtap='receive_redpacket'></image>
+<view wx:if="{{red_packet}}" class="cancle" catchtap='cancle'>×</view>

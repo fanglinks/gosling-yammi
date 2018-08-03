@@ -1,0 +1,52 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.1.1",
+	"appid": "wx8e59b6057332cbed",
+	"projectname": "%E6%A2%A6%E6%83%B3%E7%94%9F%E6%B4%BB2.0",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "小程序启动",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": "1008"
+				},
+				{
+					"id": -1,
+					"name": " 单人聊天会话",
+					"pathName": "pages/home/home",
+					"query": "id=123456789",
+					"scene": "1007"
+				}
+			]
+		}
+	}
+}

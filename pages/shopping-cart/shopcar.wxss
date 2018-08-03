@@ -1,0 +1,239 @@
+/* pages/shopping-cart/shopcar.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+.shopcarlist {
+  width: 100%;
+  height: 278rpx;
+  background-color: #fff;
+  padding-bottom: 25rpx;
+  margin-top: 20rpx;
+}
+
+.shopcarlist:nth-child(1) {
+  margin-top: 0;
+}
+
+.shopcarlist .shop-title {
+  width: 100%;
+  height: 90rpx;
+  padding: 30rpx 0 30rpx 0;
+  font-size: 30rpx;
+  color: #666;
+  box-sizing: border-box;
+}
+
+.shopcarlist .shop-title text {
+  float: left;
+  line-height: 36rpx;
+  margin-left: 20rpx;
+}
+
+.shopcarlist .shop-title  image {
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+
+.shopcarlist .leftimg {
+  float: left;
+  width: 186rpx;
+  height: 186rpx;
+  margin: 0 20rpx;
+}
+
+.shopcarlist .right {
+  width: 524rpx;
+  float: left;
+}
+
+.shopcarlist .first {
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #333;
+}
+
+.shopcarlist .first .title {
+  float: left;
+  width: 100%;
+}
+
+.shopcarlist .first image {
+  float: right;
+  width: 36rpx;
+  height: 38rpx;
+  margin-right: 20rpx;
+}
+
+.shopcarlist .second {
+  width: 100%;  
+  height: 25rpx;
+  font-size: 25rpx;
+  margin-top: 12rpx;
+  color: #fc4d64;
+}
+
+.shopcarlist .third {
+  width: 100%;  
+  height: 22rpx;
+  font-size: 22rpx;
+  margin-top: 24rpx;
+  color: #999;
+}
+
+.shopcarlist .third .zhong {
+  margin-left: 25rpx;
+}
+
+.shopcarlist .third .you {
+  float: right;
+  font-size: 25rpx;
+  margin-right: 20rpx;
+}
+
+.footfixed {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.footfixed .first {
+  float: left;
+  width: 33.33333333%;
+}
+
+.footfixed .first image {
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+  margin-top: 32rpx;
+}
+
+.footfixed .first view {
+  display: inline-block;
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 100rpx;
+}
+
+.footfixed .second {
+  float: left;
+  width: 33.33333333%;
+  text-align: right;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 100rpx;
+}
+
+.footfixed .second view {
+  float: right;
+}
+
+.footfixed .second .price {
+  color: #fc4d64;
+  margin-right: 20rpx;
+}
+
+.footfixed .jiesuan {
+  float: left;
+  width: 33.33333333%;
+  height: 100%;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: #fc4d64;
+  border-radius: 0;
+}
+
+/* 多选框样式 */
+checkbox-group {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+ 
+}
+
+checkbox .wx-checkbox-input{
+   margin-left: 20rpx;
+   border-radius: 50%;
+   width: 30rpx;
+   height: 30rpx;
+   border-color: red;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   /* border: none; */
+   background: red;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;
+   width: 30rpx;
+   height: 30rpx;
+   line-height: 30rpx;
+   text-align: center;
+   font-size:30rpx;
+   color:#fff;
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+/* 购物车为空时的样式 */
+.emptyimg {
+  width: 400rpx;
+  height: 232rpx;
+  margin:100rpx 175rpx;
+}
+
+.empty {
+  position: absolute;
+  font-size: 40rpx;
+  color: #999;
+  top: 200rpx;
+}
+
+.empty text {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.clear {
+  width:  100%;
+  height: 30rpx;
+  text-align: right;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  color: #fc4d64;
+  line-height: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.footfixed .hui {
+  background-color: #999;
+}
+
+scroll-view {
+  width: 100%;
+  height: 1046rpx;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+<!--pages/pingtuan/pingtuan.wxml-->
+<view class="container">
+<scroll-view scroll-y="true" bindscrolltolower="dibu" style="display:flex;">
+  <block wx:for="{{spellList}}">
+  <view class="pingtuanlist"  catchtap="todetail" data-pintuanid='{{item.pintuanId}}'>
+    <image src="{{item.foodImg}}"></image>
+    <view class="title">{{item.foodName}}</view>
+    <view class="second">
+      <view class="price">￥{{item.pintuanPrice}}</view>
+      <view class="num">已成团{{item.pintuanChengTuanNum}}件</view>
+    </view>
+  </view>
+  </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,85 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view hidden="{{!gotohome}}" catchtap="gotohome" class="gotohome">
+    ＜去首页
+  </view>
+  <button open-type="share">
+    <view class="share">分享就赚</view>
+  </button>
+  <view class="selectnum">
+    <!-- <image catchtap="entercart" src="/img/img-detail/5.gif"></image>
+    <view class="numbtn">
+      <view class="jian" catchtap="jiannum">-</view>
+      <view class="num">{{details.num}}</view>
+      <view class="jia" catchtap="jianum">+</view>
+    </view>
+    
+    <view class="heji">合计:￥{{heji}}</view> -->
+    <view bindtap='bayNow' data-id="{{details.id}}" class="ok">买单</view>
+  </view>
+  <view class="topicon">
+    <!-- <image class="left-icon" src="/img/img-detail/3.gif"></image> -->
+    <image catchtap="shoucang" class="right-icon" src="{{shoucang}}" data-img='{{details.foodImg}}' data-foodname='{{details.foodName}}' data-foodid='{{details.foodId}}' data-foodr='{{details.foodDetail}}' data-foodprice='{{details.foodPrice}}'>
+    </image>
+  </view>
+  <view class="swiper">
+    <swiper style="width:262rpx;height:262rpx" indicator-dots="true" autoplay="true" interval="3000" circular="true">
+      <block wx:for="{{detailImg2}}">
+        <swiper-item>
+          <image src="{{item.imgPath}}" width="262rpx" height="262rpx"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <text class="tradename">{{details.foodName}}</text>
+  <text class="price">￥{{details.foodPrice}}</text>
+  <!-- <view class="shopcar">
+    <view catchtap="openorder">加入购物车</view>
+    <text class="shuxian"></text>
+    <view >立即购买</view>
+  </view> -->
+  <view class="address">
+    <text class="send">配送：￥0.00</text>
+    <text class="save">地址：{{details.foodRemarks}}</text>
+    <text class="place">已售：{{details.foodHot}}</text>
+  </view>
+  <view class="cut-line"></view>
+  <view class="tapBar">
+    <view bindtap="xiangqing" class="{{ isChecked1 ? 'is_checked' : 'normal' }}">商品详情</view>
+    <!-- <view bindtap="pingjia" class="{{ isChecked2 ? 'is_checked' : 'normal' }}">用户评价</view>
+    <view bindtap="xuzhi" class="{{ isChecked3 ? 'is_checked' : 'normal' }}">购买须知</view> -->
+  </view>
+  <view hidden="{{changepage.first}}" class="xiangqing">
+    <block wx:for="{{detailImg}}">
+      <image mode='widthFix' style="width:750rpx;" src="{{item.imgPath}}"></image>
+    </block>
+  </view>
+  <view hidden="{{changepage.second}}" class="comment">
+    <!-- <image src="/img/img-detail/12.gif"></image> -->
+    <!-- <view class="name-talk">
+      <view class="username">
+        <text>我是谁= =</text>
+      </view>
+      <view class="content">
+        <text>这是评论如果在的事件回调函数中使用改变值，则有可能导致被不停地调用，因而通常情况下请在改变值前检测字段来判断是否是由于用户触摸引起。</text>
+      </view>
+    </view> -->
+  </view>
+  <!-- <view hidden="{{changepage.third}}" class="xuzhi">
+    <view>
+      <text class="red">有效期</text>
+      <text>2018.3.28 至 2018.4.5</text>
+    </view>
+    <view>
+      <text class="red">使用时间</text>
+      <text>9:00-23:00</text>
+    </view>
+    <view>
+      <text class="red">使用规则</text>
+      <view>
+        <text class="float"></text>
+        <text class="float2">堂食外带均可，可以打包，打包费详询商家</text>
+      </view>
+    </view>
+  </view> -->
+</view>

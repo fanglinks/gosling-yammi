@@ -1,0 +1,42 @@
+<!--pages/enter/enter.wxml-->
+<view class="topline"></view>
+<view class="container">
+  
+  <view class="first">
+    <image src="/img/enter/shangjiaruzhu03.gif"></image>
+    <text class="fitst-title">合作专属服务</text>
+  </view>
+  <view class="first-list">
+    <text class="yuanquan"></text>
+    <text class="title">微信小程序传播快速,使用简洁方便。有利于商家品牌传播,提高知名度。</text>
+  </view>
+  <view class="first-list">
+    <text class="yuanquan"></text>
+    <text class="title">商家可实时监控经营状态,掌握评价动态及时有效发现店铺问题,快速解决.轻松经营店铺</text>
+  </view>
+  <view class="second">
+     <image src="/img/enter/shangjiaruzhu06.gif"></image> 
+    <text class="fitst-title">问题小贴士</text>
+  </view>
+  <view class="second-list">
+    <text class="yuanquan"></text>
+    <text class="title">商家入驻需要哪些条件？</text>
+    <text class="content">上传门店logo 并且填写完官方所提供的基本资料信息？</text>
+  </view>
+  <view class="second-list">
+    <text class="yuanquan"></text>
+    <text class="title">入驻流程是怎么样的？</text>
+    <text class="content">先填写完基本资料提交 等待工作人员1-3个工作日审核</text>
+  </view>
+  <view class="second-list">
+    <text class="yuanquan"></text>
+    <text class="title">入驻后店铺多久能上线？</text>
+    <text class="content">按照要求提交资料以后审核通过后即可上线</text>
+  </view>
+  <view class="second-list">
+    <text class="yuanquan"></text>
+    <text class="title">入驻收费标准是什么？</text>
+    <text class="content">梦想生活一直秉承互利互惠原则现阶段入驻实行对商家免费入驻</text>
+  </view>
+  <view bindtap="ruzhu" class="ruzhu"><text>开始入驻</text></view>
+</view> 

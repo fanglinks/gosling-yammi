@@ -1,0 +1,34 @@
+<!--pages/eveluate/eveluate.wxml-->
+<view class="container">
+  <view class="empty">您没有相关评价</view>
+  <view wx:for="{{[]}}" class="comment">
+    <image src="/img/shopdetail/dianpu03.gif"></image>
+    <view class="name-talk">
+      <view class="username">
+        <text>奶茶店客户1号</text>
+      </view>
+      <view class="tradename">商品名称</view>
+      <view class="content">
+        <text>好好吃的奶茶。</text>
+      </view>
+      <view class="talkimg">
+        <image src="/img/shopdetail/dianpujieshao_07.gif"></image>
+        <image src="/img/shopdetail/dianpujieshao_07.gif"></image>
+        <image src="/img/shopdetail/dianpujieshao_07.gif"></image>
+      </view>
+    </view>
+   <view class="shop">
+      <image src="/img/shopdetail/dianpu_shangjia_05.gif"></image>
+      <view class="right">
+        <view class="first">
+          <text class="name">大凳口袋奶茶</text>
+        </view>
+        <view class="second">人均：50</view>
+        <view class="third">
+          <image src="/img/shopdetail/dianpu_shangjia_08.gif"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+   
+</view>

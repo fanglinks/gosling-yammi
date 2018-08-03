@@ -1,0 +1,24 @@
+<!--关联商户-->
+<view class="container">
+  <view class="topline"></view>
+   <view wx:for="{{shanghulist}}" class="relevance-list">
+    <image class="leftimg" src="{{item.logo}}"></image>
+    <view class="right">
+      <view class="first">
+        <text class="title">{{item.name}}</text>
+        <text class="time">{{item.createtime}}</text>
+      </view>
+      <view class="second">
+        <text>{{}}</text>
+      </view>
+      <view class="third">
+        <text></text>
+      </view>
+      <view class="fourth">
+        <!-- <image src="/img/shanghu/dianpushoucang11.gif"></image> -->
+         <text class="yongjin">已获得{{item.shanghuSales}}笔佣金</text> 
+      </view>
+    </view> 
+  </view>
+  <view class="isempty" wx:if="{{!shanghulist[0]}}">您还没有关联任何商户</view>
+</view>

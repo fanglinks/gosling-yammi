@@ -1,0 +1,102 @@
+<!--pages/home/home.wxml-->
+<view class="container1">
+  <view class="swiper">
+    <swiper style="width:750rpx;height:350rpx" autoplay="true" interval="3000" circular="true" indicator-dots="true">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <swiper-item>
+          <image mode="aspectFit" src="{{item}}" width="750rpx" height="350rpx"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="allIcon">
+    <view class="one" wx:for="{{array}}">
+      <view bindtap="{{item.shijian}}" data-id="{{index}}" data-text="{{item.text}}">
+        <image src="{{item.img}}"></image>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 头条轮播 -->
+  <view class="headline">
+    <view class="mengceng" catchtouchmove='true'></view>
+    <image class="toutiao" src='/img/collect/toutiao@2x.png'></image>
+    <swiper autoplay="true" circular="true" interval="3500" vertical="true">
+      <swiper-item wx:for="{{tanchuang}}">
+        <image class="touxiang" src="{{item.headPhoto}}"></image>
+        <view>{{item.msgContext}}</view>
+      </swiper-item>
+    </swiper>
+    <image class="background" src='/img/collect/background.png'></image>
+  </view>
+  <text class="cutline"></text>
+  <!-- 每日精选 -->
+  <view class="day-selecet">
+    <text class="text">每日·精选</text>
+    <scroll-view scroll-x="true" style=" width:100%" bindscrolltolower="day_loadmore" circular="true">
+      <view class="day-productions">
+        <!-- bindtap='toDetail' -->
+        <block wx:for="{{daily_special}}">
+          <view data-commercialid="{{item.commercialid}}" class="day-production" catchtap='toDetail'>
+            <image src="{{item.foodImg}}"></image>
+            <text>{{item.foodName}}</text>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <text class="cutline"></text>
+  <view class="day-selecet">
+    <text class="text">优质·推荐</text>
+    <view class="nice-swiper">
+      <swiper class="swiper" style="width:750rpx;height:350rpx" indicator-dots="true" autoplay="true" interval="4000" circular="true">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image mode="aspectFit" src="{{item}}" width="750rpx" height="350rpx"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <scroll-view class="scroll_NEW" scroll-x="true" bindscrolltolower="NEW_event">
+      <view class="NEW">
+        <block wx:for="{{NEW_goods}}">
+          <view bindtap='toDetail' data-commercialid="{{item.commercialid}}" class="NEW_goods">
+            <view class="img_here">
+              <image style="width:216rpx;height210rpx;" src="{{item.foodImg}}"></image>
+            </view>
+            <text>{{item.foodName}}</text>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <text class="cutline"></text>
+
+  <!-- 底部商品列表  -->
+  <block class="day-production" wx:for="{{normal_goods}}">
+    <view bindtap='toDetail' data-commercialid="{{item.shanghuid}}" class="goods-list">
+      <image src="{{item.logo}}"></image>
+      <view class="first">
+        <text class="shopname">{{item.name}}</text>
+        <!-- <text class="price">创客专享￥{{item.foodLowprice}}</text> -->
+      </view>
+      <view class="second" catchtap='daohang' data-business="{{item}}">
+        <image src="/img/hotel/2018-04-18_170604.jpg"></image>
+        <text>距离您:{{item.distance}}</text>
+        <!-- <view class="yuanjia">原价￥{{item.foodPrice}}</view> -->
+      </view>
+      <view class="third">
+        <text class="paid">{{item.shanghuSales}}人已付款</text>
+        <!-- <text class="renqi">人气:</text> -->
+        <view class="buy">
+          点击购买
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:if="{{location}}" class="location">
+  <image src="/img/home/weidingwei@2x.png"></image>
+  <view>未定位</view>
+  <button open-type="openSetting" bindopensetting='get_location'>去定位</button>
+</view>

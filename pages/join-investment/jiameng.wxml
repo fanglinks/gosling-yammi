@@ -1,0 +1,20 @@
+<!--pages/join-investment/jiameng.wxml-->
+<view class="container">
+  <image class="beijing" src="/img/join-investment/zhaoshangjiameng_02.gif"></image>
+  <view class="content">
+    <text class="jieshao">自己创业太麻烦，不如加盟吧！加盟既可以自己当老板，借由别人的商品和品牌，做自己的生意。这样经营模式非常适合初次创业的人士，又不会有太多程序手续，十分简单、方便。</text>
+    <text class="liucheng">合伙流程</text>
+    <view class="temp">
+      <image class="buzou" src="/img/join-investment/zhao1shangjiameng01_03.gif"></image>
+      <view class="temptext">
+        <text>提交申请</text>
+        <text>电话初始</text>
+        <text>邀约面试</text>
+        <text>签约</text>
+      </view>
+    </view>
+    <navigator target="miniProgram" app-id="wx7b81d9dafcff088d">
+    <view class="joinus">加入我们</view>
+    </navigator>
+  </view>
+</view>

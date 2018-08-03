@@ -1,0 +1,186 @@
+/* pages/myvips/myvip.wxss */
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 280rpx;
+  padding-top: 50rpx;
+  box-sizing: border-box;
+  background-color: #333;
+}
+
+.header image {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.header .username {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.header .chuangkevip {
+  font-size: 26rpx;
+  color: #fff;
+  margin-top: 10rpx;
+}
+
+.header .vipgrade {
+  width: 312rpx;
+  height: 30rpx;
+  margin-top: 14rpx;
+}
+
+.header .vipgrade .text1 {
+  float: left;
+  width: 96rpx;
+  height: 30rpx;
+  background-color: #fff;
+  color: #fc4d64;
+  font-size:  20rpx;
+  text-align: center;
+  line-height: 30rpx;
+  border-radius: 15rpx;
+}
+
+.header .vipgrade .grade {
+  float: left;
+  width: 216rpx;
+  height: 30rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+
+.header .vipgrade .grade .red {
+  float: left;
+  width: 110rpx;
+  height: 22rpx;
+  margin-left: 5rpx;
+  margin-top: 4rpx;
+  background-color: #fc4d64;
+  border-radius: 11rpx;
+}
+
+.header .vipgrade .grade .text2 {
+  float: left;
+  font-size: 20rpx;
+  color: #fc4d64;
+  margin-left: 10rpx;
+}
+
+.header .vipgrade .grade .text3 {
+  float: left;
+  font-size: 15rpx;
+  color: #fc4d64;
+  margin-top: 8rpx;
+}
+
+.cutline {
+  width: 100%;
+  height: 20rpx;
+  background-color: #fff;
+}
+
+.myviplist {
+  width: 100%;
+  height: 122rpx;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.myviplist:last-child{
+   border-bottom:none;
+}
+
+.myviplist image {
+  float: left;
+  width: 82rpx;
+  height: 82rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-color: #fc4d64;
+}
+
+.myviplist .right {
+  position: relative;
+  float: left;
+  width: 628rpx;
+  height: 100%;
+}
+
+.myviplist .right .username {
+  width: 400rpx;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.myviplist .right .normalvip {
+  width: 200rpx;  
+  font-size: 25rpx;
+  color: #999;
+  margin-top: 3rpx;
+}
+
+.myviplist .right .time {
+  position: absolute;
+  right: 20rpx;
+  top: 50rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+
+.header .people {
+  position: absolute;
+  width: 140rpx;
+  height: 42rpx;
+  left: 50%;
+  margin-left: -70rpx;
+  bottom: -21rpx;
+  font-size: 20rpx;
+  color: #fc4d64;
+  text-align: center;
+  line-height: 42rpx;
+  border: 1px solid #fc4d64;
+  border-radius: 21rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.fanstype {
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 500;
+  line-height: 80rpx;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.fanstype view {
+  float: left;
+  width: 50%;
+}
+
+.fanstype .red_color {
+  color: #fc4d64;
+}
+
+.nofans {
+  margin-top: 200rpx;
+  color: #666;
+  font-size: 30rpx;
+}
+
+
+
+
+
+

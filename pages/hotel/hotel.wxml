@@ -1,0 +1,56 @@
+<!--pages/hotel/hotel.wxml-->
+<!-- 顶部轮播图 -->
+<scroll-view scroll-y="true" style="display:flex">
+  <view class="container">
+    <swiper style="width:750rpx;height:350rpx" autoplay="true" circular="true">
+      <swiper-item>
+        <image class="zhanshitu" src='/img/hotel/2.gif'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class="zhanshitu" src='/img/hotel/02.gif'></image>
+      </swiper-item>
+    </swiper>
+    <!-- 初步检索酒店 -->
+    <view class="jiansuo">
+      <view>
+        <text class="first">目的地</text>
+        <input type="text" placeholder='请输入地点'></input>
+        <text class="third">></text>
+      </view>
+      <view catchtap='selecttime'>
+        <text class="first">入住时间</text>
+        <text wx:if="{{enter}}" class="second1">共{{alldays}}</text>
+        <view class="second2">
+          <text wx:if="{{enter}}" class="ruzhu">入住{{enter}}</text>
+          <text wx:if="{{leave}}" class="likai">离开{{leave}}</text>
+        </view>
+        <text class="third">></text>
+      </view>
+      <view>
+        <text class="first">价格</text>
+        <input type="digit" placeholder='默认不限价格'></input>
+        <text class="third">></text>
+      </view>
+      <button catchtap="hotellist" formType="submit">搜索</button>
+    </view>
+    <view class="jingxuan">酒店精选</view>
+    <block wx:for="{{hotel}}">
+      <view catchtap='tohotelDetail' class="list">
+        <image src="/img/hotel/5.gif"></image>
+        <view class="text1">
+          <text class="title">{{item.title}}</text>
+          <text class="qi">起</text>
+          <text class="price">￥{{item.price}}</text>
+        </view>
+        <view class="text2">
+          {{item.dizhi}}
+        </view>
+        <view class="text3">
+          <!-- <image></image> -->
+          <text class="type">高端酒店</text>
+          <text class="people">1234人消费</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>

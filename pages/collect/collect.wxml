@@ -1,0 +1,51 @@
+<!--pages/collect/collect.wxml-->
+<view class="container">
+  <view class="select">
+    <view bindtap="goodsCollect" class="{{isChecked ? 'is_checked': 'normal'}}">商品收藏</view>
+    <view bindtap="storesCollect" class="{{isChecked2 ? 'is_checked': 'normal'}}">店铺收藏</view>
+  </view>
+  <view class="collect-list">
+    <view hidden="{{pagechange.goods}}" class="goods-collect">
+      <view class="isempty" wx:if="{{!collect[0]}}">您没有收藏的商品</view>
+      <block wx:for="{{collect}}">
+        <view catchtap='doDetail' class="relevance-list" data-goodsid='{{item.collectFoodsid}}' data-yuanjia='{{item.collectRemarks}}'>
+          <image class="leftimg" src="{{item.collectImg}}"></image>
+          <view class="right">
+            <view class="first">
+              <text>{{item.collectFoodsname}}</text>
+            </view>
+            <view class="second">
+              <text>{{item.collectRemarks}}</text>
+            </view>
+            <view catchtap='cancel_collect' class="third" data-foodid="{{item}}">
+              取消收藏
+            </view>
+            <view class="fourth">
+              <text class="yongjin">￥{{item.collectPrice}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <view hidden="{{pagechange.stores}}" class="store-collect">
+      <block wx:for="{{collect_shop}}">
+        <view class="relevance-list" catchtap='geotoshop' data-shopdetail="{{item}}">
+          <image class="leftimg" src="{{item.businessImage}}"></image>
+          <view class="right">
+            <view class="first">
+              <text class="title">{{item.collectShopName}}</text>
+            </view>
+            <view class="second" style="height:30rpx">
+              <text>{{item.coolectRemarks?item.coolectRemarks:''}}</text>
+            </view>
+            <view id="renjun" class="fourth">
+              <text class="renjun">{{item.collectCreateTimeTxt}}</text>
+            </view>
+            <view class="rudian" catchtap='cancle' data-shopdetail="{{item}}">取消收藏</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

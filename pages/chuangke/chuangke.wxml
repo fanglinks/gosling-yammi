@@ -1,0 +1,10 @@
+
+<image src="https://xwq-object-1256294606.cos.ap-guangzhou.myqcloud.com/%E5%85%A5%E9%A9%BB%E8%AF%B4%E6%98%8E%E5%9B%BE%E7%89%87/2.jpg"></image>
+
+<view class="xieyi_div">
+  <image catchtap='select' src="{{agree?'/img/collect/xuanzhong@2x.png':''}}"></image>
+  <view class="white">已阅读并同意</view>
+  <view class="redColor">创客服务协议</view>
+</view>
+
+<view class="{{agree?'selectColor':'zhifubtn'}}" bindtap='payChuangke'>{{paytext?paytext:'支付99元'}}</view>

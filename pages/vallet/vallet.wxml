@@ -1,0 +1,9 @@
+<!--pages/wede/vallet/vallet.wxml-->
+<view class="container">
+  <text class="blance">账户余额</text>
+  <text class="blance-sum">￥{{money}}</text>
+  <!-- <button class="btn-recharge" bindtap='inputMoney'>充值</button> -->
+  <button class="btn-deposit" bindtap='upMoney'>提现</button>
+  <text class="question">常见问题?</text>
+  <view class="mingxi" catchtap='mingxi'>交易明细</view>
+</view>

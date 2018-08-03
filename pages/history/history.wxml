@@ -1,0 +1,13 @@
+<!--pages/history/history.wxml-->
+<view class="footgoodslist">
+    <block wx:for="{{goods}}">
+      <view wx:if="{{item.foodType != '99元专场'}}" class="footgoods" catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+        <image src="{{item.foodImg}}"></image>
+        <text class="text1">{{item.foodName}}</text>
+
+        <text class="text2"> <text class="text4">月销售：{{item.foodHot}}</text>原价：￥{{item.foodPrice}}</text>
+        <text class="text3">会员价:￥{{item.foodLowprice}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="remove" catchtap='remove'>清空足迹</view>

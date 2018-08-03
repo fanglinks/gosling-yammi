@@ -1,0 +1,136 @@
+<!--pages/menwear-detail/deetail.wxml-->
+<view class="container">
+  <button open-type="share">
+    <view class="share">分享就赚</view>
+  </button>
+  <view class="swiper">
+    <swiper style="width:750rpx;height:750rpx" autoplay="true" interval="2000" circular="{{true}}">
+      <block wx:for="{{detailImg2}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item.imgPath}}" width="750rpx" height="750rpx"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="absolute">
+      <text class="text1">￥{{goodsPintuan.pintuanPrice}}</text>
+      <text class="text2">原价:{{goodsPintuan.foodPrice}}</text>
+      <view class="you">
+        <view class="yi">距离结束时间</view>
+        <view class="er">{{countDownDay}}天{{countDownHour}}小时{{countDownMinute}}分钟{{countDownSecond}}秒</view>
+      </view>
+    </view>
+  </view>
+  <view class="first">
+    <text class="title">{{goodsPintuan.foodName}}</text>
+    
+  </view>
+  
+  <view class="second">
+    <text class="zuo">月销售{{goodsPintuan.foodHot}}笔</text>
+    <text class="you">{{goodsPintuan.foodRemarks}}</text>
+  </view>
+  <text class="cutline"></text>
+  <view wx:if="{{tuanzhangList[0] != undefinded}}" class="pingtuan">
+   
+    <scroll-view wx:if="{{tuanzhangList[0] != undefinded}}" scroll-y="{{true}}" style="display:flex;width:750rpx;height:220rpx;">
+      <block wx:for="{{tuanzhangList}}">
+        <view class="kecanyu">
+          <image src="{{item.userHotImg}}"></image>
+          <view class="text1">{{item.usernickname}}</view>
+          <view wx:if="{{goodsPintuan.pintuanPnumber-item.renshunum}}" class="text2" catchtap='canyu' data-id="{{index}}">参与</view>
+          <view wx:if="{{goodsPintuan.pintuanPnumber-item.renshunum}}" class="text3">还差{{goodsPintuan.pintuanPnumber-item.renshunum}}人成团</view>
+          <view wx:if="{{!(goodsPintuan.pintuanPnumber-item.renshunum)}}" class="text3">已成团</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <text class="cutline"></text>
+  <view class="size">
+    <!-- <text class="title">参数1</text> -->
+    <view class="sml">
+      <block wx:if="{{canshu1}}" wx:for="{{canshu1}}">
+        <view catchtap="canshu1" class="{{canshu1Boolean[index]?'selected':'normal'}}" data-id="{{index}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="size">
+    <!-- <text class="title">参数2</text> -->
+    <view class="sml">
+      <block wx:if="{{canshu2}}" wx:for="{{canshu2}}">
+        <view catchtap="canshu2" class="{{canshu2Boolean[index]?'selected':'normal'}}" data-id="{{index}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="selectnum">
+    <text>选择数量</text>
+    <view class="numbtn">
+      <view class="text1" catchtap='jian'>-</view>
+      <text class="text2">{{num}}</text>
+      <view class="text1" catchtap='jia'>+</view>
+    </view>
+  </view>
+  <text class="cutline"></text>
+  <view class="fuwu">
+    <view>
+      <image src="/img/menwear-detail/03.gif"></image>
+      <text>全场包邮</text>
+    </view>
+    <view>
+      <image src="/img/menwear-detail/03.gif"></image>
+      <text>假一赔十</text>
+    </view>
+    <view>
+      <image src="/img/menwear-detail/03.gif"></image>
+      <text>48小时发货</text>
+    </view>
+    <view>
+      <image src="/img/menwear-detail/03.gif"></image>
+      <text>正品保证</text>
+    </view>
+  </view>
+  <text class="cutline"></text>
+  <!-- 相关推荐 -->
+  <!-- 查询是否有相关推荐，没有则不显示 -->
+  <view wx:if="{{!(commTypeS[1]===undefinded && commTypeS[0].pintuanId === thisId )}}" class="tuijian">
+    <view class="title">相关推荐</view>
+    <view class="tuijiangoods">
+      <scroll-view scroll-x="true" style="display:flex;white-space:nowrap;" bindscrolltolower="loadmore">
+        <block wx:for="{{commTypeS}}">
+          <view wx:if="{{item.pintuanId != thisId}}" class="tuijianlist" catchtap='todetail' data-pintuanid='{{item.pintuanId}}' data-yuanjia='{{item.foodPrice}}'>
+            <image src='{{item.foodImg}}'></image>
+            <view class="goodsname">{{item.foodName}}</view>
+            <view class="goodsprice">￥{{item.pintuanPrice}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <text wx:if="{{commTypeS}}" class="cutline"></text>
+  <view class="detail">
+    商品详情
+  </view>
+  <block wx:for="{{detailImg}}">
+    <image class="detailImg" mode="widthFix" style="width:750rpx" src="{{item.imgPath}}"></image>
+  </block>
+  <view class="footfixed">
+    <view catchtap="gotohome" class="left">
+      <image src="/img/home/home.jpg"></image>
+      <text class="enterstore">首页</text>
+    </view>
+    <view catchtap='gotoshop' class="left">
+      <image src="/img/home/shop.png"></image>
+      <text class="enterstore">店铺</text>
+    </view>
+    
+    <view class="pay" catchtap="buy">
+      <text>￥{{goodsPintuan.pintuanPrice}}</text>
+      <text>立即开团</text>
+    </view>
+    <view style='opacity:0.3;' class="pay" catchtap="enterok">
+      <text>￥{{goodsPintuan.foodPrice}}</text>
+      <text>直接购买</text>
+    </view>
+   
+  </view>
+</view>
+<view wx:if="{{loading}}" class="loading"></view>

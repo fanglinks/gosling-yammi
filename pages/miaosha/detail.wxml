@@ -1,0 +1,158 @@
+<!--pages/menwear-detail/deetail.wxml-->
+<view class="container">
+
+  <view hidden="{{!gotohome}}" catchtap="gotohome" class="gotohome">
+    ＜去首页
+  </view>
+  <button open-type="share">
+    <view class="share">分享就赚</view>
+  </button>
+  <!-- <image class="kefu" catchtap="kefu" src="/img/shopdetail/23.gif"></image> -->
+  <view class="swiper" style="absolute:reletive">
+    <swiper style="width:750rpx;height:750rpx" autoplay="true" interval="3000" circular="true">
+      <block wx:for="{{detailImg2}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item.imgPath}}" style="width:750rpx; height:750rpx"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="absolute">
+      <text class="text1">￥{{miaoshaDetail.snipingFee}}</text>
+      <text class="text2">原价:{{miaoshaDetail.foodPrice}}</text>
+      <view class="you">
+        <view class="yi">剩余库存量</view>
+        <view class="er">{{miaoshaDetail.snipingInventory}}件</view>
+      </view>
+    </view>
+  </view>
+  <view class="first">
+    <text class="title">{{details.foodName}}</text>
+    <!-- <image catchtap="isCollect" src="{{isCollect?'/img/menwear-detail/5.gif':'/img/menwear-detail/normal.gif'}}" data-img='{{details.foodImg}}' data-foodname='{{details.foodName}}' data-foodid='{{details.foodId}}' data-foodr='{{details.foodDetail}}' data-foodprice='{{details.foodPrice}}'>
+
+      > </image> -->
+  </view>
+  <!-- <view wx:if="{{details}}" class="price">{{userType?'会员专享：￥'+details.foodLowprice:'￥'+details.foodPrice}} <text>原价：￥{{yuanjia}}</text></view> -->
+  <view class="second">
+    <text class="zuo">月销售{{details.foodHot}}笔</text>
+    <text class="you">{{details.foodRemarks}}</text>
+  </view>
+  <text class="cutline"></text>
+  <!-- <view class="fuwu">
+    <view>
+    <image src="/img/menwear-detail/03.gif"></image>
+    <text>全场包邮</text>
+    </view>
+     <view>
+    <image src="/img/menwear-detail/03.gif"></image>
+    <text>假一赔十</text>
+    </view>
+     <view>
+    <image src="/img/menwear-detail/03.gif"></image>
+    <text>48小时发货</text>
+    </view>
+     <view>
+    <image src="/img/menwear-detail/03.gif"></image>
+    <text>正品保证</text>
+    </view>
+  </view> -->
+
+  <!-- <view class="arguments">
+    <text class="title">产品参数</text>
+    <view>
+      <view class="left">
+        <text>材质</text>
+        <text>厚薄度</text>
+        <text>袖长</text>
+      </view>
+      <view class="right">
+        <text>纯棉</text>
+        <text>薄</text>
+        <text>短袖</text>
+      </view>
+    </view>
+  </view> -->
+  <!-- <text class="cutline"></text> -->
+  <view class="size">
+    <!-- <text class="title">参数1</text> -->
+    <view class="sml">
+      <block wx:if="{{canshu1}}" wx:for="{{canshu1}}">
+        <view catchtap="canshu1" class="{{canshu1Boolean[index]?'selected':'normal'}}" data-id="{{index}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="size">
+    <!-- <text class="title">参数2</text> -->
+    <view class="sml">
+      <block wx:if="{{canshu2}}" wx:for="{{canshu2}}">
+        <view catchtap="canshu2" class="{{canshu2Boolean[index]?'selected':'normal'}}" data-id="{{index}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="selectnum">
+    <text>选择数量</text>
+    <view class="numbtn">
+      <view class="text1" catchtap='jian'>-</view>
+      <text class="text2">{{num}}</text>
+      <view class="text1" catchtap='jia'>+</view>
+    </view>
+  </view>
+  <text class="cutline"></text>
+  <view class="fuwu">
+    <view>
+      <image src="/img/menwear-detail/03.gif"></image>
+      <text>全场包邮</text>
+    </view>
+    <view>
+      <image src="/img/menwear-detail/03.gif"></image>
+      <text>假一赔十</text>
+    </view>
+    <view>
+      <image src="/img/menwear-detail/03.gif"></image>
+      <text>48小时发货</text>
+    </view>
+    <view>
+      <image src="/img/menwear-detail/03.gif"></image>
+      <text>正品保证</text>
+    </view>
+  </view>
+<text class="cutline"></text>
+  <!-- 相关推荐 -->
+  <view wx:if="{{commTypeS}}" class="tuijian">
+    <view class="title">相关推荐</view>
+    <view class="tuijiangoods">
+      <scroll-view scroll-x="true" style="display:flex;white-space:nowrap;">
+        <block  wx:for="{{commTypeS}}">
+          <view wx:if="{{item.foodId != details.foodId}}" catchtap='doDetail' data-goodsid='{{item.goodsId}}' data-yuanjia='{{item.foodPrice}}' class="tuijianlist">
+            <image src='{{item.foodImg}}'></image>
+            <view class="goodsname">{{item.foodName}}</view>
+            <view class="goodsprice">￥{{item.foodPrice}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <text class="cutline"></text>
+  <view class="detail">
+    商品详情
+  </view>
+  <block wx:for="{{detailImg}}">
+    <image class="detailImg" mode="widthFix" style="width:750rpx" src="{{item.imgPath}}"></image>
+  </block>
+  <view class="footfixed">
+    <view catchtap="gotohome" class="left">
+      <image src="/img/home/home.jpg"></image>
+      <text class="enterstore">首页</text>
+    </view>
+    <view catchtap='gotoshop' class="left">
+      <image src="/img/home/shop.png"></image>
+      <text class="enterstore">店铺</text>
+    </view>
+    <view class="buy">
+      <!-- <view class="cart" catchtap="enterok">加入购物车</view>
+      <text>|</text> -->
+      <view class="lijibuy" catchtap="buy">立即购买</view>
+    </view>
+    <!-- <image class="gouwuche" catchtap='gotocart' src="/img/img-detail/5.gif"></image> -->
+  </view>
+</view>

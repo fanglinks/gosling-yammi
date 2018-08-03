@@ -1,0 +1,107 @@
+/* pages/detail-account/account.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.month {
+  position: relative;
+  width: 100%;
+  height: 98rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.thismonth {
+  font-size: 28rpx;
+  color: #000;
+  margin-bottom: 10rpx;
+}
+
+.thismonth2 {
+  font-size: 28rpx;
+  color: #000;
+  margin-bottom: 10rpx;
+  margin-left: -97rpx;
+}
+
+.money-sum {
+  display: block;
+  font-size: 25rpx;
+  color: #999999;
+}
+
+.money-sum text {
+  margin-left: 32rpx;
+}
+
+.month image {
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.consume-month {
+  position: relative;
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+  padding-top: 25rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.consume-month image {
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  margin-top: 0;
+}
+
+.consume-month .right {
+  
+  float: left;
+  width: 610rpx;
+  height: 100%;
+}
+
+.consume-month .right .first {
+  display: block;
+  font-size: 28rpx;
+  color: #000;
+  margin-bottom: 10rpx;
+}
+
+.consume-month .right .second {
+  display: block;
+  font-size: 23rpx;
+  color: #999999;
+}
+
+.consume-month .right .number {
+  position: absolute;
+  right: 20rpx;
+  font-size: 30rpx;
+  color: #000;
+  top: 28rpx;
+  font-weight: 500;
+}
+
+.consume-month .right .number1 {
+  position: absolute;
+  right: 20rpx;
+  font-size: 30rpx;
+  color: #fc4d64;
+  top: 28rpx;
+  font-weight: 500;
+}
+
+

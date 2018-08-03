@@ -1,0 +1,11 @@
+<!--pages/chongzhi/chongzhi.wxml-->
+<view class="container">
+  <view class="chongzhi">
+    <view class="text">充值金额</view>
+    <view class="second">
+      <view class="rmb">￥</view>
+      <input></input>
+    </view>
+    <!-- <view class="btn">充值</view> -->
+  </view>
+</view>

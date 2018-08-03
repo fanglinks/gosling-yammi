@@ -1,0 +1,37 @@
+<!--pages/myvips/myvip.wxml-->
+<wxs src="../tools.wxs" module="tools" />
+<view class="container">
+  <view class="header">
+    <view>
+      <image src="{{avatarUrl}}"></image>
+    </view>
+    <text class="username">{{nickName}}</text>
+    <text class="chuangkevip">{{userType}}</text>
+    <view class="people">
+      {{length}}
+    </view>
+  </view>
+  <text class="cutline"></text>
+  <view class="fanstype">
+    <view catchtap='fanstype1' class="{{fanstype1?'red_color':''}}">梦想创客({{ chuangkeTotal?chuangkeTotal:0}})</view>
+    <view catchtap='fanstype2' class="{{fanstype2?'red_color':''}}">普通用户({{ usersTotal?usersTotal:0 }})</view>
+  </view>
+  <block wx:for="{{isVip}}">
+    <view wx:if="{{item.userType == usertype}}" class="myviplist">
+      <image src="{{item.userRemark}}"></image>
+      <view class="right">
+        <view class="username">{{item.userNickname}}</view>
+        <view wx:if="{{item.userType == 'users'}}">
+          <view class="normalvip">普通用户</view>
+        </view>
+        <view wx:if="{{item.userType == 'chuangke'}}">
+          <view class="normalvip">梦想创客</view>
+        </view>
+        <view class="time">{{item.userSuoTime}}</view>
+      </view>
+      <!-- <view class="empty" wx:if="{{!isVip[0]}}">您还没有粉丝，去分享吧</view> -->
+    </view>
+  </block>
+  <view class="nofans" wx:if="{{chuangkeTotal == 0 && fanstype1 }}">您暂时没有梦想创客粉丝</view>
+  <view class="nofans" wx:if="{{usersTotal == 0 && fanstype2}}">您暂时没有普通用户粉丝</view>
+</view>

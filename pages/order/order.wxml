@@ -1,0 +1,176 @@
+<!--pages/order/order.wxml-->
+<view class="container">
+  <wxs src="../tools.wxs" module="tools" />
+
+  <view class="header">
+    <view bindtap="payment" class="{{isChecked1 ? 'is_checked' : 'normal' }}">待付款
+      <text wx:if="{{ordernum.waitPayCounts}}" class="{{isChecked1  ? 'red_color' : 'normal'}}">{{ordernum.waitPayCounts}}</text>
+    </view>
+    <view bindtap="fahuo" class="{{isChecked2 ? 'is_checked' : 'normal' }}">待发货
+    <text wx:if="{{ordernum.waitDeliverCounts}}" class="{{isChecked2 ? 'red_color' : 'normal'}}">{{ordernum.waitDeliverCounts}}</text></view>
+    <view bindtap="shouhuo" class="{{isChecked3 ? 'is_checked' : 'normal' }}">待收货
+    <text wx:if="{{ordernum.waitReceiveCounts}}" class="{{isChecked3 ? 'red_color' : 'normal'}}">{{ordernum.waitReceiveCounts}}</text></view>
+    <view bindtap="pingjia" class="{{isChecked4 ? 'is_checked' : 'normal' }}">待评价
+    <text wx:if="{{ordernum.waitCommentCounts}}" class="{{isChecked4  ? 'red_color' : 'normal'}}">{{ordernum.waitCommentCounts}}</text></view>
+    <!-- <view bindtap="shouhou" class="{{isChecked5 ? 'is_checked' : 'normal' }}">退款/售后</view> -->
+  </view>
+  <view hidden="{{changepage.first}}" class="{{!daifukuan[0]?'orderlist1':'orderlist'}}">
+    <view class="isempty" wx:if="{{!daifukuan[0]}}">
+      <image src="/img/wede/empty.png"></image>
+      <text>您还没有相关的订单</text>
+    </view>
+    <block wx:for="{{daifukuan}}">
+      <!-- <view class="yuan"></view> -->
+      <image style="width='186rpx';height='186px'" src="{{item.image}}"></image>
+      <view class="rightlist">
+        <view class="text-1">
+          <text class="name">订单号：{{item.orderid}}</text>
+          <text class="unpaid">{{item.payRemark}}</text>
+        </view>
+        <view class="text-2">
+          <text class="people">{{item.createtime}}</text>
+          <text class="copies">X{{item.counts}}</text>
+        </view>
+        <view class="text-3">
+          <text class="price">￥{{item.fee}}</text>
+          <view class="offorder" catchtap='doDetail' data-id='{{index}}' data-yuanjia='{{item.price}}'>
+            <text>前去付款</text>
+          </view>
+          <view bindtap='cancalOrder' data-orderid="{{item.orderid}}" data-cancalorder="{{item.id}}" class="offorder-1">
+            <text>取消订单</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 待发货 -->
+  <view hidden="{{changepage.second}}">
+    <view class="isempty" wx:if="{{!daifahuo[0]}}">
+      <image src="/img/wede/empty.png"></image>
+      <text>您还没有相关的订单</text>
+    </view>
+    <block wx:for="{{daifahuo}}">
+      <view class="fahuo">
+      <view class="title"></view>
+      <image style="width='186rpx';height='186px'" src="{{item.image}}"></image>
+      <view class="rightlist">
+        <view class="text-1">
+          <text class="name">订单号：{{item.orderid}}</text>
+          <text class="unpaid">￥{{item.price}}</text>
+        </view>
+        <view class="telephone">
+          <text selectable="{{true}}" catchtap='call' data-id="{{index}}">联系商家:{{item.phone}}(点击拨号)</text> </view>
+        <view class="text-2">
+          <text class="people">{{item.foodname}}</text>
+
+        </view>
+        <view class="text-3">
+          <text class="time">{{item.createtime}}</text>
+          <view bindtap='tixing' class="offorder">
+            <text>提醒店家</text>
+          </view>
+        </view>
+      </view>
+      </view>
+    </block>
+  </view>
+  <!-- 待收货 -->
+  <view hidden="{{changepage.third}}">
+    <view class="isempty" wx:if="{{!shouhuo[0]}}">
+      <image src="/img/wede/empty.png"></image>
+      <text>您还没有相关的订单</text>
+    </view>
+    <text class="cutline"></text>
+    <block wx:for="{{shouhuo}}">
+      <view class="shouhuo">
+        <image style="width='186rpx';height='186px'" src="{{item.image}}"></image>
+        <view class="rightlist">
+          <view class="text-1">
+            <text selectable="true" class="username">{{item.foodname}}</text>
+            <text class="name">订单号：{{item.orderid}}</text>
+            <text class="name right">{{item.createtime}}</text>
+          </view>
+          <view class="text-2">
+            <text wx:if="{{item.canShu}}" class="people">{{item.canShu}}</text>
+            <text class="textright">X{{item.counts}}</text>
+          </view>
+
+          <view class="text-3">
+
+            <view class='gekai'></view>
+            <text class="name price">￥{{item.fee*item.counts}}</text>
+
+            <view class="offorder" bindtap='confirmGoods' data-foodid="{{item.id}}" data-ddid='{{item.orderid}}'>
+              <text>确认收货</text>
+            </view>
+            <view class="wuliu" catchtap='wuliu' data-id="{{index}}">查看物流</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view hidden="{{changepage.fourth}}">
+    <view class="isempty" wx:if="{{!pingjia[0]}}">
+      <image src="/img/wede/empty.png"></image>
+      <text>您还没有相关的订单</text>
+    </view>
+    <text class="cutline"></text>
+    <view wx:for="{{pingjia}}" class="pingjia">
+      <image style="width='186rpx';height='186px'" src="{{item.image}}"></image>
+      <view class="rightlist">
+        <view class="text-1">
+          <text class="name">{{item.foodname}}</text>
+          <text class="unpaid">{{item.createtime}}</text>
+        </view>
+        <view class="text-2">
+          <text class="order">订单号：{{item.orderid}}</text>
+          <text class="people"></text>
+        </view>
+        <view class="text_canshu">
+          {{item.canShu?item.canShu:''}}
+        </view>
+        <view class="text-3">
+          <text class="name">数量：X{{item.counts}}</text>
+          <view class='gekai'></view>
+          <text class="name">单价：￥{{item.fee}}</text>
+          <view bindtap='kaifa' class="offorder">
+            <text>评价</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view hidden="{{changepage.fifth}}">
+    <text class="cutline"></text>
+    <view wx:for="{{[1]}}" class="shouhou">
+      <image style="width='186rpx';height='186px'" src="/img/home/shouye31.gif"></image>
+      <view class="rightlist">
+        <view class="text-1">
+          <text class="name">猪肚套餐</text>
+          <text class="unpaid">2014-08-12</text>
+        </view>
+        <view class="text-2">
+          <text class="people">2-3人餐</text>
+        </view>
+        <view class="text-3">
+          <text class="price">￥280.00</text>
+          <view class="offorder">
+            <text>已退款</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <!-- 物流信息 -->
+  <!-- <view hidden="{{wuliuinfo}}" class="wuliuinfo">
+    <scroll-view scroll-y="true" style='display:flex;width:600rpx;height:800rpx;'>
+    <block wx:for="{{wuliu}}">
+      <view class="list">
+        <view class="left">{{item.context}}</view>
+        <view class="right">{{item.time}}</view>
+      </view>
+      </block>
+    </scroll-view>
+    <view class="tuichu" catchtap='tuichu'>×</view>
+  </view> -->
+</view>

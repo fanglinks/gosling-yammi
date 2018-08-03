@@ -1,0 +1,85 @@
+{
+
+  "pages": [
+   
+   "pages/market/market",
+    "pages/home/home",
+    "pages/GoodsEvaluate/evaluate",
+    "pages/wede/wode",
+    
+    
+    "pages/moveinto/into",
+   
+    "pages/chuangke/chuangke",
+    "pages/shouquan/shouquan",
+    "pages/movie/movie",  
+    "pages/search/search",
+    "pages/phone/phone",
+    "pages/history/history",
+    "pages/enter/enter",
+   
+    "pages/order/order",
+    "pages/wuliu/wuliu",
+    "pages/zhuanchang/zhuanchang",
+    "pages/pingtuan/pingtuan",
+    "pages/miaosha/detail",
+    "pages/shopdetail/shopdetail",
+    "pages/collect/collect",
+    "pages/yulan/detail",
+    "pages/detail/detail",
+    "pages/detail-account/account",
+    "pages/join-investment/jiameng",
+    "pages/menwear-detail/deetail",
+    "pages/tixian/tixian",
+    "pages/myvips/myvip",
+    "pages/men-wear/menwear",
+    "pages/related-businesses/relevance",
+    "pages/shopping-cart/shopcar",
+    "pages/eveluate/eveluate",
+    "pages/set-personal-info/info",
+    "pages/home-cate/cate",
+    "pages/vallet/vallet",
+    "pages/chongzhi/chongzhi",
+    "pages/protocol/protocol",
+    "pages/market/dingdan/dingdan",
+    "pages/market/mydingdan/dingdan",
+    "pages/market/marketshop/shop",
+    "pages/cantuanlist/cantuanlist",
+    "pages/hotel/hotel",
+    "pages/hotel/hoteldetail/detail",
+    "pages/hotel/hotelDingdan/dingdan",
+    "pages/hotel/paixu/paixu",
+    "pages/hotel/time/time"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "iconPath": "img/home/附近-拷贝@2x.png",
+        "selectedIconPath": "img/home/附近@2x.png",
+        "pagePath": "pages/home/home",
+        "text": "附近"
+      },
+      {
+        "iconPath": "img/home/个人中心_16.jpg",
+        "selectedIconPath": "img/home/商城3@2x.png",
+        "pagePath": "pages/market/market",
+        "text": "商城"
+      },
+      {
+        "iconPath": "img/home/个人中心_14.jpg",
+        "selectedIconPath": "img/home/我的1@2x.png",
+        "pagePath": "pages/wede/wode",
+        "text": "我的"
+      }
+    ]
+  }
+}

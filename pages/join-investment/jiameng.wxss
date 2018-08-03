@@ -1,0 +1,69 @@
+/* pages/join-investment/jiameng.wxss */
+.beijing {
+  width: 100%;
+  height: 1202rpx;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 852rpx;
+  padding: 0 30rpx;
+  text-align: center;
+  left: 0;
+  top: 343rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.jieshao {
+  font-size: 25rpx;
+  color: #333;
+  line-height: 54rpx;
+  font-weight: 500;
+}
+
+.liucheng {
+  font-size: 35rpx;
+  color: #fc4d64;
+  margin-top: 84rpx;
+}
+
+.buzou {
+  float: left;
+  width: 40rpx;
+  height: 328rpx;
+}
+
+.temp {
+  width: 250rpx;
+  margin: 70rpx auto;
+  margin-bottom: 10rpx;
+}
+
+.temp .temptext {
+  float: left;
+  width: 120rpx;
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 88rpx;
+}
+
+.temp .temptext text {
+  display: block;
+  margin-bottom: 65rpx;
+  line-height: 32rpx;
+}
+
+.joinus {
+  width: 430rpx;
+  height: 80rpx;
+  background-color: #fc4d64;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}

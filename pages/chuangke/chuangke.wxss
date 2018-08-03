@@ -1,0 +1,86 @@
+/* pages/chuangke/chuangke.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  width: 100%;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.price {
+  font-size: 40rpx;
+  color: #fc4d64;
+  margin-top: 80rpx;
+}
+
+.zhifubtn {
+  position: fixed;
+  width: 400rpx;
+  height: 80rpx;
+  bottom: 150rpx;
+  left: 50%;
+  margin-left: -200rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #999;
+  margin-top: 50rpx; 
+  border-radius: 8rpx;
+}
+
+.selectColor {
+  position: fixed;
+  width: 400rpx;
+  height: 80rpx;
+  bottom: 150rpx;
+  left: 50%;
+  margin-left: -200rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #fc4d64;
+  margin-top: 50rpx; 
+  border-radius: 8rpx;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.xieyi_div {
+  position: fixed;
+  width: 500rpx;
+  height: 100rpx;
+  bottom: 200rpx;
+  left: 204rpx;
+}
+
+.xieyi_div image {
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  margin-top: 4rpx;
+}
+
+.xieyi_div .white {
+  float: left;
+  font-size: 24rpx;
+  color: #fff;
+  margin-left: 15rpx;
+}
+
+.xieyi_div .redColor {
+  float: left;
+  font-size: 24rpx;
+  color: #fc4d64;
+  margin-left: 15rpx;
+}

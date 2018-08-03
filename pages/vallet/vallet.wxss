@@ -1,0 +1,58 @@
+/* pages/wede/vallet/vallet.wxss */
+.container {
+  display: flex;
+  width:100%;
+  align-items: center;
+}
+
+.blance {
+  margin-top: 230rpx;
+  color: #606060;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.blance-sum {
+  margin-top: 45rpx;
+  color: #fc4d64;
+  font-size: 50rpx;
+}
+
+.btn-recharge {
+  margin-top: 161rpx;
+  width:640rpx;
+  height:72rpx;
+  font-size:30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 72rpx;
+  border-radius: 18rpx;
+  background-color: #fc4d64;  
+}
+
+.btn-deposit {
+  margin-top: 37px;
+  width:640rpx;
+  height:72rpx;
+  font-size:30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 72rpx;
+  border-radius: 18rpx;
+  background-color: #fc4d64;
+}
+
+.question {
+  margin-top: 400rpx;
+  font-size: 21rpx;
+  color: #fc4d64;
+}
+
+.mingxi {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+  font-weight: 500;
+}

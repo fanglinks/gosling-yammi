@@ -1,0 +1,57 @@
+<!--pages/set-personal-info/info.wxml-->
+<view class="container">
+  <form bindsubmit='formSubmit'>
+    <view class="top">
+      <text class="text1">头像</text>
+      <text class="text3">></text>
+      <image src="{{changetouxiang?img:user.userRemark}}"></image>
+    </view>
+    <text class="cutline"></text>
+    <view>
+      <text class="text1">昵称</text>
+      <text class="text3">></text>
+      <input value='{{user.userNickname}}' onfocus="dangqian" onblur="shuru" name='userNickname'></input>
+    </view>
+    <text class="cutline"></text>
+    <view>
+      <text class="text1">性别</text>
+      <text class="text3">></text>
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <input maxlength='-1' hidden='true' value='{{index}}' name="userSex"></input>
+    <input maxlength='-1' hidden='true' value='{{date}}' name="userBirthday"></input>
+    <input maxlength='-1' hidden='true' value='{{httpsimg}}' name="userRemark"></input>
+    <text class="cutline"></text>
+    <view>
+      <text class="text1">出生日期</text>
+      <picker mode="date" value="{{date}}" start="1900-09-01" end="2018-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          {{(user.userBirthday!=null)?user.userBirthday:date}}
+        </view>
+      </picker>
+    </view>
+    <text class="cutline"></text>
+    <view catchtap='phone'>
+      <text class="text1">绑定手机号</text>
+      <text class="text3">></text>
+      <text class="text2">{{user.userPhone == null?'请绑定手机号':user.userPhone}}</text>
+    </view>
+    <text class="cutline"></text>
+    <!-- <view bindtap="address" >
+      <text class="text1">收货地址</text>
+      <text class="text3">></text>
+      <text class="text2">添加/修改</text>
+    </view> -->
+    <view>
+      <text class="cutline"></text>
+      <contact-button>客服</contact-button>
+    </view>
+    <button formType="submit" wx:if="{{sexChange || name || dataChange || imgChange}}">保存</button>
+  </form>
+</view>

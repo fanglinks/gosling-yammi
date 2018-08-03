@@ -1,0 +1,12 @@
+<!--pages/cantuanlist/cantuanlist.wxml-->
+<view class="container">
+  <block wx:for="{{tuanzhangList}}">
+    <view class="kecanyu">
+     <image src="{{item.userHotImg}}"></image>
+      <view class="text1">{{item.usernickname}}</view>
+      <view wx:if="{{tuannumb-item.renshunum}}" catchtap='canyu' class="text2">参与</view>
+      <view wx:if="{{tuannumb-item.renshunum}}" class="text3">还差{{tuannumb-item.renshunum}}人成团</view>
+       <view wx:if="{{!(tuannumb-item.renshunum)}}" class="text3">已成团</view>
+    </view>
+  </block>
+</view>

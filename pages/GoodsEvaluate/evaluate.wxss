@@ -1,0 +1,147 @@
+/* pages/GoodsEvaluate/evaluate.wxss */
+
+.pages {
+  width: 100%;
+  height: 100%;
+}
+
+.cutline {
+  width: 100%;
+  height: 20rpx;
+  background-color: #f7f7f7;
+}
+
+.cutline_s {
+  width: 100%;
+  height: 10rpx;
+  background-color: #f7f7f7;
+}
+
+.header {
+  width: 100%;
+  height: 110rpx;
+  padding: 10rpx 0 10rpx 20rpx;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+
+.header .gooosimg {
+  float: left;
+  width: 90rpx;
+  height: 90rpx;
+  background-color: #000;
+  margin-right: 80rpx;
+}
+
+.header .evalute {
+  float: left;
+  width: 116rpx;
+  height: 48rpx;
+  margin-top: 21rpx;
+  margin-right: 70rpx;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 30rpx;
+}
+
+.header .evalute image {
+  float: left;
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 6rpx;
+}
+
+.header .evalute view {
+  float: left;
+  line-height: 48rpx;
+}
+
+.header .evalute .redColor {
+  color: #fc4d64;
+}
+
+.content {
+  width: 100%;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+
+.content textarea {
+  display: block;
+  width: 100%;
+  height: 180rpx;
+  font-size: 30rpx;
+  color: #999;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.content .addimg {
+  float: left;
+  width: 188rpx;
+  height: 188rpx;
+  margin-left: 20rpx;
+}
+
+.content .photo {
+  float: left;
+  width: 500rpx;
+  height: 188rpx;
+}
+
+.content .photo image {
+  display: inline-block;
+  width: 188rpx;
+  height: 188rpx;
+  margin-right: 20rpx;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.footer .evalutelist {
+  width: 100%;
+  height: 110rpx;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.footer .evalutelist view {
+  float: left;
+  font-size: 30rpx;
+  margin-right: 40rpx;
+  line-height: 110rpx;
+}
+
+.footer .evalutelist image {
+  float: left;
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 10rpx;
+  margin-top: 33rpx;
+}
+
+button {
+  width: 650rpx;
+  height: 100rpx;
+  margin-left: 50rpx;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: #fc4d64;
+  margin-top: 100rpx;
+}
+
+
+
+
+
+
+
+
+ 

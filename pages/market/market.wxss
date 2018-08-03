@@ -1,0 +1,630 @@
+/* pages/market/market.wxss */
+/* 是否出现红包 */
+.mengban {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.redpacket {
+  position: fixed;
+  width: 540rpx;
+  height: 659rpx;
+  top: 50%;
+  left: 50%;
+  margin-left: -270rpx;
+  margin-top: -330rpx;
+  z-index: 2;
+}
+
+.cancle {
+  position: fixed;
+  width: 50rpx;
+  height: 50rpx;
+  top: 150rpx;
+  right: 80rpx;
+  font-size: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  color: #999;
+  border: 1px solid #999;
+  z-index: 3;
+  border-radius: 50%;
+}
+  
+
+/* 广播消息窗 */
+
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+.radio-window text {
+  float: left;
+  font-size: 28rpx;
+  color: #000;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+  opacity: 1;
+}
+
+
+.radio-window {
+  position: fixed;
+  z-index: 10;
+  width: 378rpx;
+  height: 50rpx;
+  left: 20rpx;
+  top: 290rpx;
+  border-radius: 25rpx;
+}
+
+.radio-window image {
+  float: left;
+  width: 44rpx;
+  height: 44rpx;
+  margin-left: 5rpx;
+  margin-top: 3rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+page{
+  width: 100%;
+  height: 100%;
+}
+.shangcheng {
+  width: 100%;
+  height: 100%;
+}
+
+.container1 {
+  width: 750rpx;
+  display:flex;
+ flex-direction:column;
+ align-items:center;
+ box-sizing:border-box;
+
+}
+.swiper image{
+  width:100%;
+  height:350rpx;
+}
+
+.sousuo {
+  position: absolute;
+  width: 428rpx;
+  height: 54rpx;
+  top: 323rpx;
+  border-radius: 27rpx;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+}
+
+input {
+  display: block;
+  width: 400rpx;
+  height: 54rpx;
+  font-size: 24rpx;
+  padding-left: 30px;
+}
+
+.search {
+  position: absolute;
+  width: 34rpx;
+  height: 34rpx;
+  left: 10px;
+  top: 10rpx;
+}
+
+.allIcon {
+  width: 100%;
+  /* height: 356rpx; */
+  padding: 50rpx 48rpx;
+  box-sizing: border-box;
+}
+
+.allIcon {
+  width: 100%;
+}
+
+.allIcon .one {
+  float: left;
+  width: 96rpx;
+  height: 109rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  font-weight: 500;
+  margin-right: 90rpx;
+}
+
+.allIcon .one:nth-child(1) {
+  
+  margin-bottom: 40rpx;
+}
+
+.allIcon .one:nth-child(2) {
+  
+  margin-bottom: 40rpx;
+}
+
+.allIcon .one:nth-child(3) {
+ 
+  margin-bottom: 40rpx;
+}
+
+.allIcon .one:nth-child(4) {
+  margin-right: 0rpx;
+  margin-bottom: 40rpx;
+}
+
+.allIcon .one:nth-child(8) {
+  margin-right: 0rpx;
+}
+
+.allIcon view image {
+  margin: 0rpx auto;
+  width: 72rpx;
+  height: 72rpx;
+  margin-bottom: 10rpx;
+}
+
+.allIcon view text {
+  display: block;
+  width:96rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+}
+
+.cutline {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #f7f7f7;
+}
+
+.pingtuan {
+  width: 100%;
+  height: 592rpx;
+  box-sizing: border-box;
+  background-color: #f7f7f7; 
+}
+
+ .biaoti {
+  width: 250rpx;
+  height: 90rpx;
+  padding: 30rpx 0rpx;
+  margin-left: 250rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+ .biaoti image {
+  float: left;
+  width: 34rpx;
+  height: 34rpx;
+}
+
+ .biaoti text {
+  float: left;
+  width: 150rpx;
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  line-height: 34rpx;
+  font-weight: 500;
+}
+
+/* 今日推荐标题 */
+
+.biaoti_tuijian {
+  width: 250rpx;
+  height: 90rpx;
+  padding: 30rpx 0rpx;
+  margin-left: 280rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+ .biaoti_tuijian image {
+  float: left;
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 5rpx;
+}
+
+ .biaoti_tuijian text {
+  float: left;
+  width: 150rpx;
+  font-size: 30rpx;
+  color: #333;
+  text-align: left;
+  line-height: 34rpx;
+  font-weight: 500;
+}
+
+/* 特卖 */
+.temai {
+  width: 100%;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 70rpx;
+  font-weight: 500;
+  background-color: #f7f7f7;
+}
+
+.temai text {
+  float: left;
+}
+
+.temai .xian {
+  width: 100rpx;
+  height: 1px;
+  margin-top: 34rpx;
+  margin-left: 208rpx;
+  margin-right: 10rpx;
+  background-color: #999;
+}
+
+.temai .xian2 {
+  width: 100rpx;
+  height: 1px;
+  margin-top: 34rpx;
+  margin-left: 10rpx;
+  background-color: #999;
+}
+
+.pingtuan .text1 {
+  font-size: 30rpx;
+  color: #000;
+  margin-right: 15rpx;
+  margin-left: 20rpx;
+}
+
+.pingtuan .num {
+  font-size: 25rpx;
+  color: #fff;
+  background-color: #fc4d64;
+}
+.pingtuan .maohao {
+  color: #fc4d64
+}
+
+.pingtuan .products {
+  width: 100%;
+  height: 504rpx;
+  background-color: #f7f7f7;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.pingtuan .products scroll-view {
+  width: 100%;
+  height: 504rpx;
+   padding-top: 10rpx;
+    box-sizing: border-box;
+}
+
+.pingtuan .products .product {
+  display: inline-block;
+  width: 255rpx;
+  height: 484rpx;
+  text-align: left;
+  margin-left: 10rpx;
+ background-color: #fff;
+}
+
+.pingtuan .products .product image {
+  width: 255rpx;
+  height: 300rpx;
+}
+
+.pingtuan .products .product .text1 {
+  display: block;
+  height: 78rpx;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 78rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pingtuan .products .product .text2 {
+  display: block;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.pingtuan .products .product .text3 {
+  display: block;
+  font-size: 24rpx;
+  color: #fc4d64;
+  padding-left: 20rpx;
+  /* margin-bottom: 10rpx; */
+  box-sizing: border-box;
+}
+
+.pingtuan .products .product .text4 {
+  position: relative;
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+/* vip专场 */
+.vipPlace {
+  width: 100%;
+}
+
+/* 6张广告图 */
+
+.adphotos {
+  width: 100%;
+}
+
+.adphotos .top2 {
+  width: 100%;
+  height: 200rpx;
+}
+
+.adphotos .top2 view {
+  float: left;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.adphotos .top2 view image {
+  width: 100%;
+  height: 100%;
+}
+
+.norightborder {
+  border-right: none;
+}
+
+.adphotos .foot4 {
+  width: 100%;
+  height: 200rpx;
+}
+
+.adphotos .foot4 view {
+  float: left;
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+
+.adphotos .foot4 view image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 底部商品列表 */
+
+.footgoodslist {
+  width: 100%;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+
+.footgoodslist .footgoods {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 370rpx;
+  height: 540rpx;
+  font-size: 28rpx;
+  text-align: left;
+  /* border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8; */
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.footgoodslist .footgoods:nth-child(even) {
+  margin-right: 0rpx;
+}
+
+.footgoodslist .footgoods image {
+  width: 370rpx;
+  height: 350rpx;
+  /* margin-top: 40rpx;
+  margin-left: 12rpx; */
+  margin-bottom: 20rpx;
+}
+
+.footgoodslist .footgoods .text1 {
+  display: block;
+  width: 100%;
+  height: 76rpx;
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 500;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.footgoodslist .footgoods .text2 {
+  text-align: right;
+  font-size: 23rpx;
+  color: #999;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+}
+
+.footgoodslist .footgoods .text3 {
+  text-align: right;
+  font-size: 23rpx;
+  color: #fc4d64;
+  margin-right: 30rpx;
+
+}
+
+.footgoodslist .footgoods .text4 {
+  float: left;
+  text-align: left;
+  font-size: 23rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+
+ /* 今日推荐 
+.pingtuan .products_tuijian {
+  width: 100%;
+  height: 504rpx;
+  background-color: #f7f7f7;
+}
+
+.pingtuan .products_tuijian scroll-view {
+  width: 100%;
+  height: 504rpx;
+   padding-top: 10rpx;
+    box-sizing: border-box;
+}
+
+.pingtuan .products_tuijian .product {
+  display: inline-block;
+  width: 576rpx;
+  height: 454rpx;
+  text-align: left;
+  margin-left: 10rpx;
+ background-color: #fff;
+}
+
+.pingtuan .products_tuijian .product image {
+  width: 576rpx;
+  height: 300rpx;
+}
+
+.pingtuan .products_tuijian .product .text1 {
+  display: block;
+  height: 78rpx;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 78rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pingtuan .products_tuijian .product .text2 {
+  display: block;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.pingtuan .products_tuijian .product .text3 {
+  display: block;
+  font-size: 24rpx;
+  color: #fc4d64;
+  padding-left: 20rpx;
+  margin-bottom: 10rpx;
+  box-sizing: border-box;
+}
+
+.pingtuan .products_tuijian .product .text4 {
+  display: block;
+  font-size: 24rpx;
+  color: #999;
+ padding-left: 20rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+} */
+
+
+.huaxian {
+  position: absolute;
+  width: 100%;
+  height: 1rpx;
+  top: 19rpx;
+  left: 0rpx;
+  background-color: #999;
+}
+
+.headline {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.headline .background {
+  float: right;
+  width: 168rpx;
+  height: 100rpx;
+}
+
+.headline .mengceng {
+  position: absolute;
+  width: 100%;
+  height: 100rpx;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 99;
+}
+
+.headline .toutiao {
+  float: left;
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+
+.headline swiper {
+  float: left;
+  width: 470rpx;
+  height: 100rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.headline swiper .touxiang {
+  float: left;
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.headline swiper view {
+  float: left;
+  width: 340rpx;
+  height: 100%;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 100rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+

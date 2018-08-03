@@ -1,0 +1,16 @@
+<!--pages/detail-account/account.wxml-->
+<view>
+  <view wx:for="{{details}}" class="consume-month">
+    <view class="right">
+      <text class="first">{{item.dealContext}}</text>
+      <text class="second">{{item.dealCreatetime}}</text>
+      <view wx:if="{{item.dealType=='OUT'}}"> 
+      <text  class="number">-{{item.dealFee + (item.walletPaySalary?( '/' + item.walletPaySalary): '')}}</text>
+      </view>
+      <view wx:elif="{{item.dealType=='IN'}}">
+       <text class="number1">+{{item.dealFee}}</text>
+      </view >
+    </view>
+  </view>
+</view>
+

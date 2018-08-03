@@ -1,0 +1,196 @@
+<!--pages/moveinto/into.wxml-->
+<form bindsubmit="addMerchant">
+  <view class="container">
+    <text class="cutline"></text>
+    <view class="list">
+      <text class="name">商家名称</text>
+      <text class="xing">*</text>
+      <input onblur="sjmc" placeholder='请输入商家名称' name="merchantName" value="{{sjmc}}" focus='{{merchantName_focus}}'></input>
+    </view>
+    <view class="list">
+      <text class="name">商家姓名</text>
+      <text class="xing">*</text>
+      <input onblur="sjxm" placeholder='请输入您的真实姓名' name="shanghuName" value="{{sjxm}}" focus='{{shanghuName_focus}}'></input>
+    </view>
+    <view class="list">
+      <text class="name">商家电话</text>
+      <text class="xing">*</text>
+      <input type='number' onblur="tel" placeholder='商家手机号(商家端账号)' name="merchantPhone" value="{{tel}}" focus='{{merchantPhone_focus}}'></input>
+    </view>
+    <view class="list">
+      <text class="name">登录密码</text>
+      <text class="xing">*</text>
+      <input password='true' onblur="mima" placeholder='设置商家端登录密码' name="shanghuPassword" value="{{mima}}" focus='{{shanghuPassword_focus}}'></input>
+    </view>
+    <view class="list">
+      <text class="name">确认密码</text>
+      <text class="xing">*</text>
+      <input password='true' onblur="querenmima" placeholder='请再次输入登录密码' name="password2" value="{{querenmima}}" focus='{{password2_focus}}'></input>
+    </view>
+    <view class="list">
+      <text class="name">身份证号</text>
+      <text class="xing">*</text>
+      <input type="idcard" onblur="sjsfz" placeholder='请输入您的身份证号码' name="shanghuIdcard" value="{{sjsfz}}" focus='{{shanghuIdcard_focus}}'></input>
+    </view>
+    <view class="upload">
+      <view class="top">
+        <text class="name">身份证正面照片</text>
+        <text class="xing">*</text>
+      </view>
+      <image wx:for="{{imgzm}}" wx:for-index="key" src="{{imgzm[key]}}"></image>
+      <image bindtap="uploadimgzm" src="/img/jiantou/kaishiruzhu03.gif"></image>
+    </view>
+    <view class="upload">
+      <view class="top">
+        <text class="name">身份证背面照片</text>
+        <text class="xing">*</text>
+      </view>
+      <image wx:for="{{imgbm}}" wx:for-index="key" src="{{imgbm[key]}}"></image>
+      <image bindtap="uploadimgbm" src="/img/jiantou/kaishiruzhu03.gif"></image>
+    </view>
+    <view class="upload">
+      <view class="top">
+        <text class="name">商家资质(企业或个体营业执照等)</text>
+        <text class="xing">*</text>
+      </view>
+
+
+      <image style="float:left;" bindtap="uploadimgzz" src="/img/jiantou/kaishiruzhu03.gif"></image>
+      <view class="scroll_x" style="width:500rpx;float:left;white-space:nowrap;">
+        <scroll-view scroll-x="true">
+          <image style="display:inline-block" wx:for="{{imgzz}}" wx:for-index="key" src="{{imgzz[key]}}"></image>
+        </scroll-view>
+      </view>
+
+    </view>
+    <!-- <view class="list">
+      <text class="name">商家微信</text>
+      <text class="xing">*</text>
+      <input bindchange="weixin" placeholder='商家微信号' name="merchanWachat"></input>
+    </view> -->
+
+    <input maxlength='-1' hidden='true' value='{{shanghuCardzheng}}' name="shanghuCardzheng"></input>
+    <input maxlength='-1' hidden='true' value='{{shanghuCardfan}}' name="shanghuCardfan"></input>
+    <input maxlength='-1' hidden='true' value='{{sahnghuZhizhao}}' name="sahnghuZhizhao"></input>
+
+    <input maxlength='-1' hidden='true' value='{{logoImg}}' name="merchantLogo"></input>
+    <input maxlength='-1' hidden='true' value='{{doorImg}}' name="merchantImg"></input>
+    <input maxlength='-1' hidden='true' value='{{addres}}' name="merchantZuobiao"></input>
+    <input maxlength='-1' hidden='true' value='{{businessBegin}}{{businessBegin2}}' name="businessBegin"></input>
+    <view class="list">
+      <input name="shanghuTypeline" hidden='true' value="{{array1[index1]}}"></input>
+      <text class="name">商家类型</text>
+      <text class="xing">*</text>
+      <view class="section">
+        <picker bindchange="bindPickerChange1" value="{{array1[index1]}}" range="{{array1}}">
+          <view class="picker">
+            {{array1[index1]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="upload">
+      <view class="top">
+        <text class="name"> {{array1[index1] === '线下'? '商家门店图'+'（请用长宽比为1:1的图片作为logo）':'品牌logo' +'（请用长宽比为1:1的图片作为logo）'}}</text>
+        <text class="xing">*</text>
+      </view>
+      <image wx:for="{{img}}" wx:for-index="key" src="{{img[key]}}"></image>
+      <image bindtap="uploadimg" src="/img/jiantou/kaishiruzhu03.gif"></image>
+    </view>
+    <view class="list">
+      <text class="name">所在区域</text>
+      <text class="xing">*</text>
+      <view class="weizhi" bindtap="selectDistrict">
+        <text>{{areaInfo?areaInfo:'请选择省市区'}}</text> </view>
+      <input hidden='true' placeholder='请选择省市区' name="merchantQuyu" value="{{areaInfo}}"></input>
+    </view>
+    <view class="list">
+      <text class="name">商家坐标</text>
+      <text class="xing">*</text>
+      <view bindtap="local" class="weizhi">
+        <text>{{latitude}}</text>
+        <text>{{longitude}}</text>
+      </view>
+    </view>
+    <view class="list">
+      <text class="name">详细地址</text>
+      <text class="xing">*</text>
+      <input onblur="dizhi" placeholder='请输入详细地址' name="merchantAddress" value="{{dizhi}}" focus='{{merchantAddress_focus}}'></input>
+    </view>
+
+    <view hidden='{{isOnline}}' class="list">
+      <text class="name">营业时间</text>
+      <!-- <text class="xing"></text> -->
+      <picker class="leftpicker" mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+        <view class="picker" style='height:100rpx;'>
+          {{time}}
+        </view>
+      </picker>
+      <text class="zhi">至</text>
+      <picker mode="time" value="{{timeend}}" start="00:00" end="23:59" bindchange="bindTimeChange2">
+        <view class="picker" style='height:100rpx;'>
+          {{timeend}}
+        </view>
+      </picker>
+    </view>
+    <view hidden='{{isOnline}}' class="upload">
+      <view class="top">
+        <text class="name">商家图片</text>
+        <text class="shuoming">（产品图或实体店图）</text>
+      </view>
+      <image wx:for="{{img2}}" wx:for-index="key" src="{{img2[key]}}"></image>
+      <image bindtap="uploadimg2" src="/img/jiantou/kaishiruzhu03.gif"></image>
+    </view>
+    <view class="list">
+      <text class="name">商家简介</text>
+      <input onblur="sjjj" placeholder='请输入商家简介' name="merchantAbstract" value="{{sjjj}}"></input>
+    </view>
+    <view hidden='{{isOnline}}' class="list">
+      <text class="name">提供服务</text>
+      <input onblur='servers' placeholder='空格分割，如wifi 停车' name="merchantServe" value="{{servers}}"></input>
+    </view>
+    <view class="list">
+      <text class="name">推荐人</text>
+      <text class="xing">*</text>
+      <input type="number" bindchange="tuijian" placeholder='推荐人手机号（必填）' name="tuijianPhone" value="{{tuijian}}" focus='{{tuijianPhone_focus}}'></input>
+    </view>
+
+    <view class="xieyi">
+      <image catchtap='xieyi' src="{{isSelected?'/img/shopdetail/03.gif':'/img/shopdetail/6.gif'}}"></image>
+      <view>我已阅读并同意</view>
+      <view class="colorred" catchtap="read">《梦想生活入驻协议》</view>
+    </view>
+    <view class="kongwei">
+      <view class="tishi" hidden="{{tishi}}">请检查必填项是否填写规范</view>
+    </view>
+<view class="produce_money">入驻需成为梦想创客</view>
+    <button formType="submit" class='tijiao'>提交申请</button>
+  </view>
+</form>
+
+<!--城市三级联动-->
+<!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;margin-top:10rpx">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!-- 是否显示黑底 -->
+<view class="heiping" hidden="{{heiping}}"></view>

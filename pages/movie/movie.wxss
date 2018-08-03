@@ -1,0 +1,174 @@
+page{
+    background: #f7f7f7;
+    width: 100%;
+    height: 100%;
+    padding-top: 90rpx;
+}
+
+/* 搜索条 */
+.movie_search{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #f7f7f7;
+}
+.movie_search input{
+    width: 640rpx;
+    height: 50rpx;
+    font-size: 24rpx;
+    border: 1px solid #e8e8e8;
+    border-radius: 27rpx;
+    background: #ffffff;
+    color: #999999;
+     margin: 25rpx;
+     padding-left: 58rpx;
+}
+.movie_search .img_search{
+    width: 25rpx;
+    height: 25rpx;
+    position: fixed;
+    left: 45rpx;
+    top: 42rpx;
+}
+
+/* 热门影片 */
+.hot_movie{
+    width: 100%;
+    height: 400rpx;
+    background: #ffffff;   
+    position: relative;
+    margin-bottom: 20rpx;
+}
+.hot_movie .movie_title{
+    width: 100%;
+    padding: 20rpx 20rpx 30rpx 20rpx;
+    position: relative;
+    box-sizing: border-box;
+}
+.hot_movie .text1{
+    font-size: 32rpx;
+    font-family: PingFang-SC-Medium;
+    color: #333333;
+}
+.hot_movie .text2{
+    font-size: 24rpx;
+    font-family: PingFang-SC-Medium;
+    color: #666666;
+    position: absolute;
+    right: 20rpx;
+    bottom: 30rpx;
+}
+
+/* 热门影片之轮播图 */
+ .scroll{
+    width: 100%;
+    white-space: nowrap;
+}
+.scroll .every_movie{
+    width: 182rpx;
+    height: 275rpx;
+    margin-left: 20rpx;
+    display: inline-block;
+}
+
+.every_movie .img_movie{
+    width: 182rpx;
+    height: 220rpx;
+}
+.every_movie .name_movie{
+    width: 182rpx;
+    font-size: 24rpx;
+    font-family: MicrosoftYaHei;
+    color: #666666;
+    text-align: center;
+
+}
+
+/* tab选项卡 */
+.food_tab{
+    left: 0;
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+    padding: 10rpx 0;
+     border-bottom:1rpx solid #dddddd; 
+    z-index: 1;
+}
+.all_tab,.near_tab,.pank_tab{
+    width: 33.33%;
+    height: 80rpx;
+    line-height: 70rpx; 
+    text-align: center;
+    font-family: PingFang-SC-Medium;
+    color: #333333;
+    font-size: 28rpx;
+    border-right:1px solid #dddddd;
+}
+.food_tab image{
+    width: 15rpx;
+    height: 15rpx;
+    margin-left: 20rpx;
+}
+.common_tab{
+    width: 750rpx;
+    height: 656rpx;
+    z-index: 1;
+    background: #f7f7f7;
+    overflow: auto;
+    top: 90rpx;
+}
+.common_tab .common_tab1{
+    padding: 30rpx; 
+    width: 306rpx;
+    height: 86rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 28rpx;
+    box-sizing: border-box;
+}
+
+.common_tab .active{
+    background: #ffffff;
+}
+.common_tab1 .common_tab2{
+    width: 444rpx;
+    height: 656rpx;
+    overflow: auto;
+    background: #ffffff;
+    position: fixed;  
+    right: 0;
+   top: 189rpx;
+}
+.common_tab2 .common_tab2_1{
+    width: 444rpx;
+    height: 88rpx;
+    padding: 30rpx 60rpx;
+    border-bottom:1rpx solid #dddddd;
+    box-sizing: border-box;
+}
+.common_tab2 .active1{
+    color: red;
+}
+
+
+    /* .mengban {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    z-index: -1;
+}     */
+
+/* scroll-view {
+    width: 100%;
+    height: 900rpx;
+}   */
+
+/* 电影详情 */
+.movie{
+    width: 100%;
+    height: 1600rpx;
+}

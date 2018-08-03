@@ -1,0 +1,77 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="{{isSearch?'serarchDiv center':'serarchDiv'}}">
+      <image src="/img/search/search.png"></image>
+      <input  focus="true" confirm-type="search" onblur="searchRecode" bindfocus="is_search" bindconfirm="searchok" placeholder='请输入商品名称' value="{{recodevalue}}" name="keyword"></input>
+    </view>
+    <view class="cancel" catchtap='back' hidden='{{isSearch}}'>取消</view>
+  </view>
+  <!-- 搜索记录 -->
+  <view class="isSearch" hidden='{{isSearch}}'>
+    <view hidden='{{!recode[0]}}' class="recode">
+      <view class="title">
+        <image class="icon" src='/img/search/record.png'></image>
+        <text>历史搜索</text>
+        <image catchtap='removeRecode' class="remove" src="/img/search/delete.png"></image>
+      </view>
+      <block wx:for="{{recode}}">
+        <text style='float:left;margin-bottom:20rpx;' class="word" catchtap='openlist' data-text="{{item}}">{{item}}</text>
+      </block>
+    </view>
+    <!-- 热搜 -->
+    <view class="recode" hidden='{{isSearch}}'>
+      <view class="title">
+        <image class="icon" src='/img/search/hotSearch.png'></image>
+        <text>热门搜索</text>
+        <text class="other" catchtap='nextdata'>换一批</text>
+      </view>
+      <block wx:for="{{hotdata}}">
+        <text class="word" style='float:left;margin-bottom:20rpx;' catchtap='openlist' data-text="{{item}}">{{item}}</text>
+      </block>
+    </view>
+  </view>
+
+  <!-- 这里显示商品列表 -->
+  <!-- 排序 -->
+  <view class="context" hidden='{{!isSearch}}'>
+    <view class="paixu">
+      <view class="{{comprehensive?'paixu_son1':'paixu_son'}}" catchtap='comprehensive'>综合</view>
+      <view class="{{price?'paixu_son1':'paixu_son'}}" catchtap='price'>价格{{price_sort?'↑':'↓'}}</view>
+      <view class="{{sales?'paixu_son1':'paixu_son'}}" catchtap='sales'>销量</view>
+      <view class="paixu_son">
+        <image catchtap='change_template' src="{{template?'/img/search/class.png':'/img/search/class2.png'}}"></image>
+      </view>
+    </view>
+    <!-- 一个一排模版 -->
+    <view hidden='{{!template}}' class="goodsLists">
+      <block wx:for="{{goods}}">
+        <view class="goodsList" catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+          <image src="{{item.foodImg}}"></image>
+          <view class="rightList">
+            <view class="titlelist">{{item.foodName}}</view>
+            <view class="pricelist">￥{{item.foodPrice}}</view>
+            <view class="vippricelist">
+              ￥{{item.foodLowprice}}
+              <text>(会员价)</text>
+              <text class="floatright">销量:{{item.foodHot}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 两个一排模版 -->
+    <view hidden='{{template}}' class="footgoodslist">
+      <block wx:for="{{goods}}">
+        <view wx:if="{{item.foodType != '99元专场'}}" class="footgoods" catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+          <image src="{{item.foodImg}}"></image>
+          <text class="text1">{{item.foodName}}</text>
+
+          <text class="text2"> <text class="text4">月销售：{{item.foodHot}}</text>原价：￥{{item.foodPrice}}</text>
+          <text class="text3">创客专享:￥{{item.foodLowprice}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

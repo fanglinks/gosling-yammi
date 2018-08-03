@@ -1,0 +1,104 @@
+<!--pages/hotel/hoteldetail/detail.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper style="width: 750rpx;height:350rpx">
+    <swiper-item>
+      <image style="width: 750rpx;height:350rpx" src="/img/hotel/02.gif"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 轮播图下分割线上 -->
+  <view class="header">
+    <view class="first">
+      <text class="hotelName">北京燕莎中心凯宾斯基酒店</text>
+      <image src="/img/shopdetail/13.gif"></image>
+    </view>
+    <image class="second" src="/img/hotel/11.gif"></image>
+    <view class="third">
+      <image src="/img/hotel/2018-04-18_170604.jpg"></image>
+      <text>广东省深圳市龙华新区龙华地铁站左转200米</text>
+    </view>
+  </view>
+  <view class="cutline"></view>
+  <!-- 分割线下时间选择器 -->
+  <view class="time" catchtap='time'>
+    <text class="text1">入住</text>
+    <text class="text2">{{enter}}</text>
+    <text class="text1">离开</text>
+    <text class="text2">{{leave}}</text>
+    <text class="text3">></text>
+  </view>
+  <!-- 房间种类套餐 -->
+  <view class="roomlist">
+    <block>
+      <view class="room">
+        <image src="/img/hotel/03.gif"></image>
+        <view class="roomright">
+          <view class="first">豪华套房</view>
+          <view class="second">
+            <text class="text1">￥1200</text>
+            <text class="text2">含早餐</text>
+            <text class="text2">有窗</text>
+            <view catchtap="yuding" class="text3">预订</view>
+          </view>
+          <view class="third">
+            入住前一天18:00前可免费取消
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="cutline"></view>
+  <view class="changepage">
+    <view class="{{isSelected1?'redColor':'normal'}}" catchtap='xiangqing'>详情</view>
+    <view class="{{isSelected2?'redColor':'normal'}}" catchtap='pinglun'>评价</view>
+  </view>
+
+  <!-- 详情分页 -->
+  <view hidden="{{xiangqing}}" class="xiangqing">
+    <view class="server">可提供服务</view>
+    <view class="allicon">
+      <block wx:for="{{server}}">
+        <view class="icon">
+          <image style="width:45rpx;height:44rpx;" src="{{item.img}}"></image>
+          <view>{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="producde">酒店介绍</view>
+    <view class="text">
+      酒店成立于1888年1月。。。
+    </view>
+  </view>
+  <!-- 评论分页 -->
+  <view hidden="{{pinglun}}" class="pinglun">
+    <view class="alllist">
+      <block>
+        <view class="list">
+          <view class="first">
+            <image src="/img/hotel/xiaoyan.jpg"></image>
+            <text>萧炎</text>
+          </view>
+          <view class="second">酒店综合来说很不错哦</view>
+          <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+            <image src="/img/hotel/12.gif"></image>
+            <image src="/img/hotel/12.gif"></image>
+            <image src="/img/hotel/12.gif"></image>
+            <image src="/img/hotel/12.gif"></image>
+          </scroll-view>
+          <view class="third">
+            <view class="text1">
+              <text>评分</text>
+              <image style="width: 152rpx;height:24rpx;" src="/img/hotel/11.gif"></image>
+            </view>
+            <view class="text2">
+              舒适大床房
+            </view>
+            <view class="text3">
+              2017.11.16
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,69 @@
+<view class="wodepage">
+<view class="header">
+  <view class="touxiang">
+    <image src="{{avatarUrl}}"></image>
+  </view>
+  <text class="userinfo">
+    <text>普通会员</text>
+    <text>{{nickName}}</text>
+    <text class="xinyu">信用值：{{"111"}}</text>
+  </text>
+  <view class="upvip">升级创客</view>
+</view>
+<view class="dizhi">
+  <view bindtap="address" class="address">+ 添加地址 / 地址管理</view>
+</view>
+  <view class="center">
+    <view bindtap="qianbao">
+      <image src="/img/wede/1.gif"></image>
+      <text>钱包</text>
+    </view>
+    <view bindtap="mingxi">
+      <image class="mx" src="/img/wede/个人中心_16.gif"></image>
+      <text>明细</text>
+    </view>
+    <view bindtap="tixian">
+      <image src="/img/wede/个人中心_13.gif"></image>
+      <text>提现</text>
+    </view>
+  </view>
+  <view class="foot">  
+    <view class="foot-sun">
+      <view bindtap='addCart'>
+        <image src="/img/wede/个人中心_25.gif"></image>
+        <text>购物车</text>
+      </view>
+      <view bindtap="dingdan">
+        <image src="/img/wede/个人中心_28.gif"></image>
+        <text>订单</text>
+      </view>
+      <view bindtap="pingjia">
+        <image src="/img/wede/个人中心_31.gif"></image>
+        <text>评价</text>
+      </view>
+      <view bindtap="shoucang">
+        <image src="/img/wede/个人中心_22.gif"></image>
+        <text>收藏</text>
+      </view>
+    </view>
+    <view class="foot-sun">
+      <view bindtap="myvips">
+        <image src="/img/wede/个人中心_43.gif"></image>
+        <text>我的会员</text>
+      </view>
+      <view bindtap="guanlian">
+        <image src="/img/wede/个人中心_38.gif"></image>
+        <text>关联商户</text>
+      </view>
+      <view bindtap="ruzhu">
+        <image src="/img/wede/个人中心_46.gif"></image>
+        <text>商家入驻</text>
+      </view>
+      <view bindtap="jiameng">
+        <image src="/img/wede/个人中心_25.gif"></image>
+        <text>招商加盟</text>
+      </view>
+    </view>
+  </view>
+  <image bindtap="set" class="set" src="/img/wede/个人中心_03.gif"></image>
+</view>

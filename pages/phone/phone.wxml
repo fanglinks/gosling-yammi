@@ -1,0 +1,13 @@
+<!--pages/phone/phone.wxml-->
+<view class="container">
+  <view class="list">
+    <image src="/img/phone/03.gif"></image>
+    <input type="number" bindinput="watchPassWord" placeholder='请输入您的手机号'></input>
+  </view>
+  <view class="list">
+    <image class="img2" src="/img/phone/07.gif"></image>
+    <input type="number" bindinput="watchYanzheng" placeholder='请输入您的验证码'></input>
+    <button disabled='{{disabled}}' class="yanzheng" catchtap='yanzheng'>{{status}}</button>
+  </view>
+  <button bindtap='submitMatch' class="tijiao">提交</button>
+</view>

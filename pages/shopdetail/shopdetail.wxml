@@ -1,0 +1,202 @@
+<!--pages/shopdetail/shopdetail.wxml-->
+<view class="container">
+  <scroll-view style='width:100%;height:100%;' scroll-y="true">
+    <view hidden="{{!is_share}}" catchtap="gotohome" class="gotohome">
+      ＜去首页
+    </view>
+    <view class="fixaction-top">
+      <view class="swiper">
+        <swiper style="width:750rpx;height:350rpx" autoplay="true" interval="2000">
+          <!-- <block wx:for="{{}}"> -->
+          <swiper-item>
+            <image src="{{shopinfo.img}}" width="750rpx" height="350rpx"></image>
+          </swiper-item>
+          <!-- </block> -->
+        </swiper>
+      </view>
+      <view class="shop">
+        <image src="{{shopinfo.img}}"></image>
+        <view class="right">
+          <view class="first">
+            <text class="name">{{shopinfo.name}}</text>
+            <!-- <view class="pay">
+              <text>买单</text>
+            </view> -->
+            <image catchtap='isCollect' src="{{isCollect?'/img/menwear-detail/5.gif':'/img/menwear-detail/normal.gif'}}"></image>
+          </view>
+          <view class="second">{{shopinfo.detail}}</view>
+          <view class="third">
+            <image src="/img/food/5.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="info">
+        <image class="info_img" src="/img/hotel/2018-04-18_170604.jpg"></image>
+        <text catchtap='daohang' class="address">{{shopinfo.address}}</text>
+        <view class="tel">
+          <image catchtap='call' src="/img/shopdetail/dianpu_shangjia013.gif"></image>
+        </view>
+      </view>
+      <text class="cutline"></text>
+      <view class="selectbtn">
+        <view bindtap="main" class="{{isChecked ? 'is_checked': 'normal'}}">菜单</view>
+        <view bindtap="talk" class="{{isChecked2 ? 'is_checked': 'normal'}}">评价</view>
+        <view bindtap="info" class="{{isChecked3 ? 'is_checked': 'normal'}}">商家信息</view>
+      </view>
+    </view>
+
+    <view class="content">
+      <view hidden="{{pagechange.main}}">
+        <!-- <scroll-view scroll-y="true" style=" height:475rpx; white-space: nowrap; display: flex"> -->
+        <block wx:for="{{shangping}}" wx:for-item="shangping" wx:for-index="key">
+          <view data-index="{{key}}" data-foodid="{{shangping.foodId}}" class="shoplist">
+            <view>
+              <image src="{{shangping.foodImg}}"></image>
+              <view class="shoplist-right">
+                <view class="first">
+                  <text class="produce-name" id="shangping.foodName">{{shangping.foodName}}</text>
+                  <text class="produce-price">{{(userType?'创客专享': '') + '￥' + shangping.foodPrice}}</text>
+                </view>
+                <view class="second">
+                  <text class="produce-info">{{shangping.foodDetail}}</text>
+                  <view catchtap="jiahao" class="jiahao">
+                     <view wx:if="{{!(shangping.goodsSkuChicun || shangping.goodsSkuColor)}}" catchtap="zengjia" data-index="{{key}}" class="text"><image src="/img/jiantou/jiahao@2x(1).png"></image></view> 
+                    <!-- <view wx:if="{{!(shangping.goodsSkuChicun || shangping.goodsSkuColor)}}" catchtap="select_ok" data-item="{{shangping}}" class="text_select">加入订单</view> -->
+                    <view wx:else catchtap="select_add" data-item="{{shangping}}" class="text_select">选规格</view>
+                    <view wx:if="{{shangping.goodsSkuChicun == '' && shangping.goodsSkuColor == ''}}" hidden="{{shangping.num==0}}" class="num">{{shangping.num}}</view>
+                    <view wx:if="{{shangping.goodsSkuChicun == '' && shangping.goodsSkuColor == ''}}" catchtap="jianshao" data-index="{{key}}" data-id="{{key}}" hidden="{{shangping.num==0}}" class="jianhao"><image src="/img/jiantou/jianhao@2x.png"></image></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+        <!-- </scroll-view> -->
+      </view>
+
+      <view hidden="{{pagechange.talk}}">
+        <!-- <view class="comment">
+        <image src="/img/shopdetail/dianpu03.gif"></image>
+        <view class="name-talk">
+          <view class="username">
+            <text>奶茶店客户1号</text>
+          </view>
+          <view class="tradename">商品名称</view>
+          <view class="content">
+            <text>好好吃的奶茶。</text>
+          </view>
+          <view class="talkimg">
+            <image src=""></image>
+            <image src=""></image>
+            <image src=""></image>
+          </view>
+        </view>
+      </view> -->
+        <view class="evaluate">暂无评价</view>
+      </view>
+      <view hidden="{{pagechange.info}}">
+        <view class="store-info">
+          <view>
+            <text class="left-info">商家名称: </text>
+            <text>{{shopinfo.name}}</text>
+          </view>
+          <view>
+            <text class="left-info">商家地址: </text>
+            <text>{{shopinfo.address}}</text>
+          </view>
+          <view>
+            <text class="left-info">商家电话: </text>
+            <text catchtap='call'>{{shopinfo.phone}}</text>
+          </view>
+          <view>
+            <text class="left-info">营业时间: </text>
+            <text>{{shopinfo.workingtime}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button open-type="share">
+      <image class="share" src="{{}}"></image>
+    </button>
+
+    <image class="service" src="{{}}"></image>
+    <view class="account">
+      <view class="my_shopcar" catchtap='show_shopcar'>
+        <image src="{{shopCar_num == 0 ?'/img/home/gouwuchehui@2x.png':'/img/home/gouwuche@2x.png'}}"></image>
+        <text wx:if="{{shopCar_num}}">{{shopCar_num?shopCar_num:''}}</text>
+      </view>
+      <view class="price-sum">合计：
+        <text>￥{{aggregate_amount}}</text> </view>
+      <form bindsubmit='jiesuan' report-submit="true">
+        <button class="{{aggregate_amount == 0? 'disabled' : 'payall'}}" form-type='submit'>结算</button>
+      </form>
+    </view>
+  </scroll-view>
+</view>
+<!-- 线下选商品规格窗口 -->
+<view class="select_arguments" hidden="{{select_window}}">
+  <view class="top_content">
+    <view class="cancle" catchtap='close_window'>×</view>
+    <view class="goods_name">{{now_goods.foodName}}</view>
+    <view wx:if="{{now_goods.goodsSkuColor!=''}}" class="title_one">规格</view>
+    <view wx:if="{{now_goods.goodsSkuColor!=''}}" class="arguments_one">
+      <block wx:for="{{now_goods.goodsSkuColor}}">
+        <view catchtap='canshu1' class="{{(num1 === index)?'select_redcolor':''}}" data-item="{{item}}" data-id="{{index}}">{{item}}</view>
+      </block>
+    </view>
+    <view wx:if="{{now_goods.goodsSkuChicun!=''}}" class="title_one">口味</view>
+    <view wx:if="{{now_goods.goodsSkuChicun!=''}}" class="arguments_one">
+      <block wx:for="{{now_goods.goodsSkuChicun}}">
+        <view catchtap='canshu2' class="{{(num2 === index)?'select_redcolor':''}}" data-item="{{item}}" data-id="{{index}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="select_ok">
+    <view class="price">￥{{now_goods.foodPrice}}</view>
+    <button catchtap='select_ok'>选好了</button>
+  </view>
+</view>
+
+<!-- 购物车数据展示 -->
+<view class="{{show_shopcar?'popup_shocarshow':'popup_shocar'}}">
+  <view class="header">
+    <view class="title">丨已选商品</view>
+    <view class="clearall" catchtap='clear_allgoods'>清空</view>
+    <image src='/img/home/clear.png'></image>
+  </view>
+  <view class="scroll_list">
+    <scroll-view scroll-y="true">
+      <block wx:for="{{shopping_cart1}}">
+        <view wx:if="{{item.num != 0}}" class="shopcar_list">
+          <view class="goods_info">
+            <view class="goods_name">{{item.foodName}}</view>
+            <view class="goods_detail">{{item.canshu1 != '无' ? item.canshu1: ''}}{{item.canshu2 != '无'?('/' + item.canshu2):''}}</view>
+          </view>
+          <view class="price">￥{{item.foodPrice}}</view>
+          <view class="goods_num">
+            <view class="jian" catchtap='reduceNum' data-item="{{item}}" data-index="{{index}}"><image src="/img/jiantou/jianhao@2x.png"></image></view>
+            <view class="num">{{item.num}}</view>
+            <view class="jia" catchtap='addNum' data-item="{{item}}" data-index="{{index}}"><image src="/img/jiantou/jiahao@2x(1).png"></image></view>
+          </view>
+        </view>
+      </block>
+      <block wx:for="{{shopping_cart2}}">
+        <view wx:if="{{item.num != 0}}" class="shopcar_list">
+          <view class="goods_info">
+            <view class="goods_name">{{item.foodName}}</view>
+            <view class="goods_detail">{{item.canshu1 != '无' ? item.canshu1: ''}}{{item.canshu2 != '无'?('/' + item.canshu2):''}}</view>
+          </view>
+          <view class="price">￥{{item.foodPrice}}</view>
+          <view class="goods_num">
+            <view class="jian" catchtap='reduceNum2' data-item="{{item}}" data-index="{{index}}"><image src="/img/jiantou/jianhao@2x.png"></image></view>
+            <view class="num">{{item.num}}</view>
+            <view class="jia" catchtap='addNum2' data-item="{{item}}" data-index="{{index}}"><image src="/img/jiantou/jiahao@2x(1).png"></image></view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+<view wx:if="{{mengban}}" class="mengban_select" catchtouchmove='true'></view>
+
+<view wx:if="{{show_shopcar}}" class="mengban" catchtouchmove='true' catchtap='close_allwindow'></view>

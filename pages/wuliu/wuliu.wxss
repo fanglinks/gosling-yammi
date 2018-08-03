@@ -1,0 +1,104 @@
+/* pages/wuliu/wuliu.wxss */
+.cutline {
+  width: 100%;
+  height: 20rpx;
+  background-color: #f7f7f7;
+}
+
+.header {
+  width: 100%;
+  height: 210rpx;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.header image {
+  float: left;
+  width: 170rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.header .right{
+  float: left;
+  width: 520rpx;
+  height: 100%;
+}
+
+.header .right .first {
+  height: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 30rpx;
+}
+
+.header .right .second {
+  height: 84rpx;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 84rpx;
+}
+
+.header .right .third {
+  height: 24rpx;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 24rpx;
+}
+
+/* 物流信息 */
+
+.infolist {
+  padding-top: 40rpx;
+}
+
+.infolist .list {
+  width: 100%;
+  height: 100rpx;
+}
+
+.infolist .list .time{
+  float: left;
+  width: 150rpx;
+  height: 100%;
+  font-size: 24rpx;
+  color: #999;
+  border-right: 1px solid #e8e8e8; 
+  box-sizing: border-box;
+}
+
+.infolist .list .right{
+  position: relative;
+  float: left;
+  width: 600rpx;
+  height: 100%;
+  font-size: 24rpx;
+  color: #999;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+}
+
+.infolist .list .right text{
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  left: -6rpx;
+  top: 12rpx;
+  border-radius: 50%;
+  background-color: #e8e8e8;
+}
+
+.infolist .list:first-child .right {
+  color: #333;
+}
+
+.infolist .list:first-child .right text {
+  position: absolute;
+  width: 24rpx;
+  height: 24rpx;
+  left: -12rpx;
+  top: 12rpx;
+  border-radius: 50%;
+  background-color: #fc4d64;
+}

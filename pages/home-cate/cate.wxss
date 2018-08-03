@@ -1,0 +1,334 @@
+ /* pages/home-cate/cate.wxss 
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+.header {
+  width: 100%;
+  height: 75rpx;
+  margin-bottom: 20rpx;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.header view {
+  float: left;
+  width: 25%;
+  height: 100%;
+  font-size: 30rpx;
+  color: #666;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.header .border {
+  border-right: 1px solid #e8e8e8;
+}
+
+.catelist {
+  width: 100%;
+  padding: 25rpx 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.catelist image {
+  float: left;
+  width: 148rpx;
+  height: 148rpx;
+  margin-right: 20rpx;
+}
+
+.catelist .right {
+  float: left;
+  width: 542rpx;
+}
+
+.catelist .right .first {
+  font-size: 28rpx;
+  height: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+.catelist .right .first image {
+  float: right;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.catelist .right .second {
+  height: 25rpx;
+  font-size: 25rpx;
+  color: #999;
+}
+
+.catelist .right .second image {
+  width: 154rpx;
+  height: 25rpx;
+}
+
+.catelist .right .third {
+  font-size: 23rpx;
+  color: #999;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 20rpx;
+}
+
+.catelist .right .fourth {
+  height: 36rpx;
+}
+
+.catelist .right .fourth .text1 {
+  color: #fff;
+  margin-right: 30rpx;
+  background-color: #fc4d64;
+  border-radius: 0;
+}
+
+.catelist .right .fourth text {
+  font-size: 23rpx;
+  padding: 5rpx 24rpx;
+  color: #999;
+  line-height: 36rpx;
+  text-align: center;
+  margin-right: 17rpx;
+  border: 1px solid #fc4d64;
+  border-radius: 18rpx;
+}
+
+.catelist .right .fifth {
+  height: 22rpx;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  color: #999;
+  font-size: 22rpx;
+  flex-direction: row;
+  margin: 15rpx 0;
+}
+
+.catelist .right .fifth .floatright {
+ float: right;
+}
+
+
+ */
+
+
+page{
+    background: #f7f7f7;
+    width: 100%;
+    height: 100%;
+    /* padding-top: 190rpx;
+    box-sizing: border-box; */
+}
+
+.allpages {
+  width: 100%;
+  height: 100%;
+  padding-top: 190rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.allpages_hidden {
+   width: 100%;
+  height: 100%;
+  padding-top: 190rpx;
+  box-sizing: border-box;
+  
+}
+
+
+/* 搜索条 */
+.food_search{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #f7f7f7;
+}
+.food_search input{
+    width: 640rpx;
+    height: 50rpx;
+    font-size: 24rpx;
+    border: 2rpx solid #e8e8e8;
+    border-radius: 27rpx;
+    background: #ffffff;
+    color: #999999;
+     margin: 25rpx;
+     padding-left: 58rpx;
+}
+.food_search .img_search{
+    width: 25rpx;
+    height: 25rpx;
+    position: fixed;
+    left: 45rpx;
+    top: 42rpx;
+}
+
+
+/* 选项卡 */
+.food_tab{
+    position: fixed;
+    top: 91rpx;
+    left: 0;
+    display: flex;
+    width: 100%;
+    background: #f7f7f7;
+    padding: 10rpx 0;
+     border-bottom:1rpx solid #dddddd; 
+    z-index: 1;
+}
+.all_tab,.near_tab,.pank_tab{
+    width: 33.33%;
+    height: 80rpx;
+    line-height: 70rpx; 
+    text-align: center;
+    font-family: PingFang-SC-Medium;
+    color: #666;
+    font-size: 28rpx;
+    border-right:1px solid #dddddd;
+}
+
+.red_color{
+  color: #fc4d64;
+}
+
+.food_tab image{
+    width: 15rpx;
+    height: 15rpx;
+    margin-left: 20rpx;
+}
+
+.food_tab .all_tab .rotate{
+    transform: rotate(90deg);
+}
+.common_tab{
+    position: fixed;
+    width: 750rpx;
+    height: 656rpx;
+    z-index: 1;
+    background: #f7f7f7;
+     overflow: auto; 
+    top: 192rpx;
+}
+
+scroll-view {
+  width: 750rpx;
+  height: 656rpx;
+}
+
+.common_tab .common_tab1{
+    padding: 30rpx; 
+    width: 100%;
+    height: 86rpx;
+    /* font-family: PingFang-SC-Medium; */
+    font-size: 28rpx;
+    border-bottom: 1px solid #e8e8e8;
+    box-sizing: border-box;
+}
+
+
+.common_tab .active{
+    color: #fc4d64;
+}
+.common_tab1 .common_tab2{
+    width: 444rpx;
+    height: 656rpx;
+    background: #ffffff;
+    position: fixed;  
+    right: 0;
+   top: 189rpx;
+}
+.common_tab2 .common_tab2_1{
+    width: 444rpx;
+    height: 88rpx;
+    padding: 30rpx 60rpx;
+    border-bottom:1rpx solid #dddddd;
+    box-sizing: border-box;
+}
+.common_tab2 .active1{
+    color: red;
+}
+
+
+/* 食物门店 */
+.shop_lists {
+  width: 100%;
+}
+
+.food_list{
+    margin-top: 1rpx;
+    width: 750rpx;
+    height: 208rpx;
+    background: #ffffff;
+    padding: 20rpx 30rpx;
+    border-bottom: 1rpx solid #e8e8e8;
+    box-sizing: border-box;
+}
+.food_list .food_picture{
+        width:140rpx;
+        height:140rpx;
+        
+    }
+.food_store{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0rpx 30rpx 0 20rpx;
+    height: 166rpx;
+    width: 500rpx;
+}
+
+.food_store .shopname {
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.xiaoliang1 image{
+    width: 116rpx;
+    height: 19rpx;
+    margin-right: 20rpx;
+}
+.xiaoliang1 text,.xiaoliang2 text,.food_price view{
+    font-family: PingFang-SC-Medium;
+    color: #666666;
+    font-size: 24rpx;
+}
+
+.xiaoliang1 text,.xiaoliang2 .distance {
+  float: right;
+}
+
+
+.xiaoliang2 text{
+    margin-right: 15rpx;
+}
+.food_price view{
+    margin-left: 170rpx;
+    margin-top: 20rpx;
+}
+.food_price text{
+    position: absolute;
+    right: 10rpx;
+    line-height: 25rpx;
+    font-size: 24rpx;
+    color: #bbbbbb;
+}
+
+
+/* 蒙版 */
+.mengban {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}

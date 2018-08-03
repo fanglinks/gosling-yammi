@@ -1,0 +1,78 @@
+<!--pages/market/marketshop/shop.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="swiper">
+    <swiper style="width:750rpx;height:750rpx" autoplay="true" interval="3000" circular="true">
+      <swiper-item wx:for="{{goodsInfo}}">
+        <image style="width:750rpx;height:750rpx" src="{{item.foodImg}}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="search">
+      <image src="/img/img-detail/2018-04-24_113318.png"></image>
+      <input bindconfirm="search" confirm-type='search' placeholder='请输入您想要查询的商品名称'></input>
+    </view>
+  </view>
+  <!-- 店铺信息 -->
+  <view class="shopinfo">
+    <image src="{{shopinfo.logo}}"></image>
+    <view class="right">
+      <view class="first">
+        <text>{{shopinfo.name}}</text>
+        <image catchtap='isCollect' src="{{isCollect?'/img/img-detail/collect.gif':'/img/img-detail/6.gif'}}"></image>
+      </view>
+      <view class="second">
+        <!-- <text class="text2">10万人收藏</text> -->
+      </view>
+    </view>
+  </view>
+  <view class="cutline"></view>
+  <!-- 优惠券 -->
+  <!-- <view class="quanlist">
+    <scroll-view scroll-x="true" style="width:730rpx;height:136rpx;display:flex;white-space: nowrap;">
+      <block wx:for="{{[1,1,1,1]}}">
+        <view class="youhuiquan">
+          <text class="one">3</text>
+          <text class="two">￥</text>
+          <text class="three">优惠券</text>
+          <text class="four">PICK UP</text>
+          <text class="five">单笔实付满59元使用</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view> -->
+  <!-- <view class="cutline"></view> -->
+  <!-- 店铺招牌商品展示区域 -->
+  <!-- <view class="niceshow">
+    <image class="datu"></image>
+    <view class="kuangjia">
+      <image class="zhongtu"></image>
+      <view class="xiangkuang">
+        <image class="xiaotu"></image>
+        <view>shop now +</view>
+      </view>
+      <view class="xiangkuang">
+        <image class="xiaotu"></image>
+        <view>shop now +</view>
+      </view>
+    </view>
+  </view> -->
+  <!-- 新品上市 -->
+  <view class="goodsLists">
+    <block wx:for="{{search?searchlist:goodsInfo}}">
+      <view class="goodsList" wx:if="{{item.foodType != '99元专场'}}" catchtap='doDetail' data-goodsid='{{item.foodId}}' data-yuanjia='{{item.foodPrice}}'>
+        <image src="{{item.foodImg}}"></image>
+        <view class="rightList">
+          <view class="titlelist">{{item.foodName}}</view>
+          <view class="pricelist">￥{{item.foodPrice}}</view>
+          <view class="vippricelist">
+          ￥{{item.foodLowprice}}<text>(会员价)</text>
+          <text class="floatright">销量:{{item.foodHot}}</text>
+          </view>
+        </view>
+      </view>
+     </block>
+  </view>
+  <!-- <view hidden="{{!gotohome}}" catchtap="gotohome" class="gotohome">
+    ＜去首页
+  </view> -->
+</view>

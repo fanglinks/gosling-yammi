@@ -1,0 +1,368 @@
+/* pages/market/marketshop/shop.wxss */
+/* 去首页 */
+.gotohome{
+  position: fixed;
+  width: 130rpx;
+  height: 50rpx;
+  top:  50rpx;
+  left: 50rpx;
+  font-size: 30rpx;
+  color:#fff;
+  text-align: center;
+  line-height: 50rpx;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 25rpx;
+}
+
+.cutline {
+  width: 100%;
+  height: 20rpx;
+  background-color: #f7f7f7;
+}
+/* 搜索 */
+.swiper {
+  position: relative;
+}
+
+.search {
+  position: absolute;
+  width: 588rpx;
+  height: 56rpx;
+  left: 50%;
+  bottom: -28rpx;
+  margin-left: -294rpx;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 56rpx;
+  border: 1px solid #ececec;
+  border-radius: 28rpx;
+  background-color: #fff;
+}
+
+.search image {
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 13rpx;
+  margin-left: 25rpx;
+}
+
+.search input {
+  float: left;
+  width: 450rpx;  
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-left: 25rpx;
+  margin-top: 8rpx;
+}
+
+/* 店铺信息 */
+.shopinfo {
+  width: 100%;
+  height: 102rpx;
+  padding: 0 20rpx;
+  margin: 50rpx 0 30rpx 0rpx;
+  box-sizing: border-box;
+}
+
+.shopinfo image {
+  float: left;
+  width: 102rpx;
+  height: 102rpx;
+  margin-right: 20rpx;
+}
+
+.shopinfo .right {
+  float: left;
+  width: 588rpx;
+  height: 100%;
+}
+
+.shopinfo .right .first {
+  width: 100%;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 70rpx;
+}
+
+.shopinfo .right .first text{
+  float: left;
+}
+
+.shopinfo .right .first image {
+  float: right;
+  width: 45rpx;
+  height: 40rpx;
+  margin-top: 15rpx;
+}
+
+.shopinfo .right .second {
+  width: 100%;
+  height: 22rpx;
+  font-size: 22rpx;
+  color: #999;
+  line-height: 22rpx;
+}
+
+.shopinfo .right .second .text1 {
+  float: left;
+}
+
+.shopinfo .right .second .text2 {
+  float: right;
+}
+
+/* 优惠券 */
+.quanlist {
+  width: 100%;
+  height: 196rpx;
+  padding: 30rpx 0 30rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.quanlist .youhuiquan {
+  display: inline-block;
+  width: 260rpx;
+  height: 136rpx;
+  color: #fff;
+  padding: 10rpx 20rpx 0 20rpx;
+  background-color: #fc4d64;
+  box-sizing: border-box;
+  margin-right: 20rpx;
+}
+
+.quanlist .youhuiquan .one {
+  float: left;
+  font-size: 60rpx;
+}
+
+.quanlist .youhuiquan .two {
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 20rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.quanlist .youhuiquan .three {
+  float: right;
+  font-size: 30rpx;
+}
+
+.quanlist .youhuiquan .four {
+  float: right;
+  width: 105rpx;
+  height: 26rpx;
+  font-size: 20rpx;
+  color: #fc4d64;
+  text-align: center;
+  line-height: 26rpx;
+  margin-top: 8rpx;
+  background-color: #fff;
+}
+
+.quanlist .youhuiquan .five {
+  float: right;
+  font-size: 22rpx;
+  color: #fff;
+  margin-top: 10rpx;
+}
+
+/* 展示图 */
+.niceshow {
+  width: 100%;
+}
+
+.datu {
+  width: 100%;
+  height: 1166rpx;
+  margin-bottom: 20rpx;
+  background-color: #333;
+  
+}
+
+.kuangjia {
+  width: 100%;
+  height: 1039rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #e1e9f4;
+}
+
+.zhongtu {
+  width: 100%;
+  height: 438rpx;
+  background-color: #333;
+  
+}
+
+.xiangkuang {
+  float: left;
+  width: 335rpx;
+  height: 554rpx;
+  padding: 10rpx 8rpx 0 8rpx;
+  background-color: #fff;
+  margin-right: 40rpx;
+  box-sizing: border-box;
+}
+
+.xiangkuang:last-child{
+  margin-right: 0;
+}
+
+.xiangkuang view {
+  width: 100%;
+  height: 82rpx;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 82rpx;
+  text-align: center;
+}
+
+.xiaotu {
+  width: 319rpx;
+  height: 462rpx;
+  background-color: #333;
+}
+
+/* 新品上市 */
+.newlists {
+  width: 100%;
+  padding:  0 20rpx;
+  box-sizing: border-box;
+}
+
+.newlists .title {
+  width: 710rpx;
+  height: 88rpx;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 88rpx;
+  margin-top: 16rpx;
+}
+
+/* .newlists .list {
+  float: left;
+  width: 355rpx;
+  height: 532rpx;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+
+.newlists .list:nth-child(odd) {
+  border-right: none;
+}
+
+.newlists .list image {
+  width: 348rpx;
+  height: 350rpx;
+  background-color: #333;
+  margin-top: 10rpx;
+}
+
+.newlists .list:nth-child(odd) image {
+  margin-left: 5rpx;
+}
+
+.newlists .list .first {
+  width: 100%;
+  height: 108rpx;
+  font-size: 30rpx;
+  line-height: 54rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  margin-bottom: 14rpx;
+}
+
+
+.newlists .list .second {
+  width: 100%;
+  height: 25rpx;
+  font-size: 25rpx;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.newlists .list .second text {
+  float: right;
+  margin-left: 20rpx;
+}
+
+.newlists .list .second .text2{
+  font-size: 22rpx;
+  line-height: 28rpx;
+  color: #fc4d64;
+} */
+
+/* 2.0店铺商品样式 */
+.goodsLists {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.goodsLists .goodsList {
+  width: 710rpx;
+  height: 266rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.goodsLists .goodsList image {
+  float: left;
+  width: 227rpx;
+  height: 227rpx;
+}
+
+.goodsLists .goodsList .rightList {
+  float:left;
+  margin-left: 20rpx;
+  width: 463rpx;
+  overflow: hidden;
+}
+
+.goodsLists .goodsList .rightList view {
+  overflow: hidden;
+}
+
+.goodsLists .goodsList .rightList .titlelist {
+  height: 92rpx;
+  font-size: 30rpx;
+  line-height: 46rpx;
+  margin-bottom: 45rpx;
+}
+
+.goodsLists .goodsList .rightList .pricelist {
+  font-size: 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-left: 2rpx;
+}
+
+.goodsLists .goodsList .rightList .vippricelist {
+  font-size: 35rpx;
+  color: #fc4d64;
+  height: 60rpx;
+  line-height: 55rpx;
+}
+
+.goodsLists .goodsList .rightList .vippricelist text {
+  display: inline-block;
+  font-size: 24rpx;
+  line-height: 50rpx;
+}
+
+.goodsLists .goodsList .rightList .vippricelist .floatright {
+  float: right;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 55rpx;
+}
+

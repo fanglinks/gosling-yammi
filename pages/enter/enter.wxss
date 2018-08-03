@@ -1,0 +1,106 @@
+/* pages/enter/enter.wxss */
+.container {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.topline {
+  width: 750rpx;
+  height: 20rpx;
+  background-color: #f7f7f7;
+}
+
+.first {
+  width: 100%;
+  height: 38rpx;
+  font-size: 30rpx;
+  color: #fc4d64;
+  line-height: 38rpx;
+  margin: 30rpx 0 30rpx 0rpx;
+}
+
+.first .fitst-title {
+  float: left;
+  margin-bottom: 5rpx;
+}
+
+.first image {
+  float: left;  
+  width: 50rpx;
+  height: 38rpx;
+  margin-right: 20rpx;
+}
+
+.first-list {
+  width: 100%;
+}
+
+.yuanquan {
+  display: inline-block;
+  width: 10rpx;
+  height: 10rpx;
+  background: #fc4d64;
+  border-radius: 50%;
+  margin-right: 12rpx;
+  margin-bottom: 7rpx;
+  margin-left: 5rpx;
+}
+
+.first-list .title {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #999;
+}
+
+.second {
+  width: 100%;
+  height: 38rpx;
+  font-size: 30rpx;
+  color: #fc4d64;
+  line-height: 38rpx;
+  margin: 30rpx 0 20rpx 0rpx;
+}
+
+.second .fitst-title {
+  float: left;
+  margin-bottom: 5rpx;
+}
+
+.second image {
+  float: left;  
+  width: 50rpx;
+  height: 38rpx;
+  margin-right: 20rpx;
+}
+
+.second-list {
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.second-list .title {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.second-list .content {
+  display: block;
+  font-size: 24rpx;
+  color: #999;
+  padding-left: 22rpx;
+}
+
+.ruzhu {
+  position: fixed;
+  width: 428rpx;
+  height: 80rpx;
+  left: 50%;
+  margin-left: -214rpx;
+  bottom: 30rpx;
+  background-color: #fc4d64;
+  color: #fff;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
